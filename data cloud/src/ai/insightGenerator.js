@@ -32,6 +32,26 @@ function toInsightText(value) {
   }
 
   if (typeof value === 'object') {
+    if (Array.isArray(value)) {
+      return value
+        .map((item) => toInsightText(item).trim())
+        .filter(Boolean)
+        .join(', ');
+    }
+
+    const entries = Object.entries(value)
+      .filter(([, entryValue]) => entryValue !== null && entryValue !== undefined)
+      .map(([key, entryValue]) => {
+        const formattedValue =
+          typeof entryValue === 'object' ? toInsightText(entryValue) : String(entryValue).trim();
+        return formattedValue ? `${key}: ${formattedValue}` : '';
+      })
+      .filter(Boolean);
+
+    if (entries.length) {
+      return entries.join(', ');
+    }
+
     try {
       return JSON.stringify(value);
     } catch {
