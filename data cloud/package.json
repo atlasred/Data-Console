@@ -1,0 +1,12 @@
+{
+  "name": "data-console-data-cloud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone CSV stream to data-objects lake pipeline for Data Console.",
+  "type": "commonjs",
+  "scripts": {
+    "ingest": "node src/index.js",
+    "ingest:watch": "node src/index.js --watch",
+    "ingest:schedule": "node src/index.js --schedule-seconds=60"
+  }
+}

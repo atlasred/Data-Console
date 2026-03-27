@@ -1,0 +1,263 @@
+{
+  "generatedAt": "2026-03-27T15:42:08.488Z",
+  "semanticView": {
+    "businessKpis": {
+      "totalCustomers": 100,
+      "totalOrders": 100,
+      "totalNetRevenue": 16306.25,
+      "totalRefundAmount": 3068.75,
+      "overallRefundRate": 18.819471061709468,
+      "activeSubscriptions": 50,
+      "avgResolutionHours": 11
+    },
+    "segmentSummaries": [
+      {
+        "segment": "at_risk",
+        "customerCount": 25,
+        "orderCount": 25,
+        "netRevenue": 3620,
+        "refundAmount": 781.25,
+        "refundRate": 21.581491712707184,
+        "ticketRate": 1,
+        "flags": {
+          "atRisk": true,
+          "healthy": false,
+          "highRefundPressure": true
+        }
+      },
+      {
+        "segment": "loyal",
+        "customerCount": 25,
+        "orderCount": 25,
+        "netRevenue": 4230,
+        "refundAmount": 762.5,
+        "refundRate": 18.02600472813239,
+        "ticketRate": 1,
+        "flags": {
+          "atRisk": true,
+          "healthy": false,
+          "highRefundPressure": true
+        }
+      },
+      {
+        "segment": "new",
+        "customerCount": 25,
+        "orderCount": 25,
+        "netRevenue": 3937.5,
+        "refundAmount": 781.25,
+        "refundRate": 19.841269841269842,
+        "ticketRate": 1,
+        "flags": {
+          "atRisk": true,
+          "healthy": false,
+          "highRefundPressure": true
+        }
+      },
+      {
+        "segment": "vip",
+        "customerCount": 25,
+        "orderCount": 25,
+        "netRevenue": 4518.75,
+        "refundAmount": 743.75,
+        "refundRate": 16.459197786998615,
+        "ticketRate": 1,
+        "flags": {
+          "atRisk": true,
+          "healthy": false,
+          "highRefundPressure": true
+        }
+      }
+    ],
+    "monthlyRevenue": [
+      {
+        "month": "2026-01",
+        "netRevenue": 4406.25
+      },
+      {
+        "month": "2026-02",
+        "netRevenue": 5048.75
+      },
+      {
+        "month": "2026-03",
+        "netRevenue": 4581.25
+      },
+      {
+        "month": "2026-04",
+        "netRevenue": 2270
+      }
+    ],
+    "monthlyRefunds": [
+      {
+        "month": "2026-02",
+        "refundAmount": 821.25,
+        "refundsCount": 27
+      },
+      {
+        "month": "2026-03",
+        "refundAmount": 991.25,
+        "refundsCount": 31
+      },
+      {
+        "month": "2026-04",
+        "refundAmount": 937.5,
+        "refundsCount": 30
+      },
+      {
+        "month": "2026-05",
+        "refundAmount": 318.75,
+        "refundsCount": 12
+      }
+    ],
+    "subscriptionHealth": {
+      "totalSubscriptions": 100,
+      "activeSubscriptions": 50,
+      "activeRate": 50
+    },
+    "supportHealth": {
+      "totalTickets": 100,
+      "avgResolutionHours": 11,
+      "ticketsPerCustomer": 1
+    }
+  },
+  "charts": {
+    "netRevenueBySegment": [
+      {
+        "segment": "at_risk",
+        "value": 3620
+      },
+      {
+        "segment": "loyal",
+        "value": 4230
+      },
+      {
+        "segment": "new",
+        "value": 3937.5
+      },
+      {
+        "segment": "vip",
+        "value": 4518.75
+      }
+    ],
+    "refundBySegment": [
+      {
+        "segment": "at_risk",
+        "refundAmount": 781.25,
+        "refundRate": 21.58
+      },
+      {
+        "segment": "loyal",
+        "refundAmount": 762.5,
+        "refundRate": 18.03
+      },
+      {
+        "segment": "new",
+        "refundAmount": 781.25,
+        "refundRate": 19.84
+      },
+      {
+        "segment": "vip",
+        "refundAmount": 743.75,
+        "refundRate": 16.46
+      }
+    ],
+    "refundsOverTime": [
+      {
+        "month": "2026-02",
+        "refundAmount": 821.25,
+        "refundsCount": 27
+      },
+      {
+        "month": "2026-03",
+        "refundAmount": 991.25,
+        "refundsCount": 31
+      },
+      {
+        "month": "2026-04",
+        "refundAmount": 937.5,
+        "refundsCount": 30
+      },
+      {
+        "month": "2026-05",
+        "refundAmount": 318.75,
+        "refundsCount": 12
+      }
+    ],
+    "customerMixBySegment": [
+      {
+        "segment": "at_risk",
+        "customers": 25
+      },
+      {
+        "segment": "loyal",
+        "customers": 25
+      },
+      {
+        "segment": "new",
+        "customers": 25
+      },
+      {
+        "segment": "vip",
+        "customers": 25
+      }
+    ],
+    "heatmap": [
+      {
+        "segment": "at_risk",
+        "metrics": {
+          "netRevenue": 3620,
+          "refundAmount": 781.25,
+          "refundRate": 21.58,
+          "ticketRate": 1,
+          "orderCount": 25
+        }
+      },
+      {
+        "segment": "loyal",
+        "metrics": {
+          "netRevenue": 4230,
+          "refundAmount": 762.5,
+          "refundRate": 18.03,
+          "ticketRate": 1,
+          "orderCount": 25
+        }
+      },
+      {
+        "segment": "new",
+        "metrics": {
+          "netRevenue": 3937.5,
+          "refundAmount": 781.25,
+          "refundRate": 19.84,
+          "ticketRate": 1,
+          "orderCount": 25
+        }
+      },
+      {
+        "segment": "vip",
+        "metrics": {
+          "netRevenue": 4518.75,
+          "refundAmount": 743.75,
+          "refundRate": 16.46,
+          "ticketRate": 1,
+          "orderCount": 25
+        }
+      }
+    ]
+  },
+  "managerInsights": {
+    "headline": "Business Health Alert",
+    "summary": "High refund pressure across all segments. Average resolution time is 11 hours, indicating healthy support response times.Review top opportunity and risk segments to optimize revenue growth.",
+    "alerts": [
+      "{\"type\":\"highRefundPressure\",\"description\":\"All segments experience high refund pressure.\"}",
+      "{\"type\":\"atRisk\",\"description\":\"Segments at_risk, loyal, new, vip are at risk due to high refund rates and pressures.\"}"
+    ],
+    "recommendedActions": [
+      "{\"action\":\"Optimize pricing for segments at_risk, loyal, new, vip\"}",
+      "{\"action\":\"Monitor support response times to ensure they remain healthy.\"}"
+    ],
+    "chartCaptions": {
+      "netRevenueBySegment": "",
+      "refundBySegment": "",
+      "refundsOverTime": ""
+    }
+  }
+}

@@ -1,0 +1,4926 @@
+{
+  "entities": {
+    "Customer_DMO": [
+      {
+        "customerId": 1,
+        "email": "customer001@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-01-08"
+      },
+      {
+        "customerId": 2,
+        "email": "customer002@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-01-15"
+      },
+      {
+        "customerId": 3,
+        "email": "customer003@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-01-22"
+      },
+      {
+        "customerId": 4,
+        "email": "customer004@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-01-29"
+      },
+      {
+        "customerId": 5,
+        "email": "customer005@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-02-05"
+      },
+      {
+        "customerId": 6,
+        "email": "customer006@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-02-12"
+      },
+      {
+        "customerId": 7,
+        "email": "customer007@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-02-19"
+      },
+      {
+        "customerId": 8,
+        "email": "customer008@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-02-26"
+      },
+      {
+        "customerId": 9,
+        "email": "customer009@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-03-05"
+      },
+      {
+        "customerId": 10,
+        "email": "customer010@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-03-12"
+      },
+      {
+        "customerId": 11,
+        "email": "customer011@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-03-19"
+      },
+      {
+        "customerId": 12,
+        "email": "customer012@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-03-26"
+      },
+      {
+        "customerId": 13,
+        "email": "customer013@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-04-02"
+      },
+      {
+        "customerId": 14,
+        "email": "customer014@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-04-09"
+      },
+      {
+        "customerId": 15,
+        "email": "customer015@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-04-16"
+      },
+      {
+        "customerId": 16,
+        "email": "customer016@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-04-23"
+      },
+      {
+        "customerId": 17,
+        "email": "customer017@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-04-30"
+      },
+      {
+        "customerId": 18,
+        "email": "customer018@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-05-07"
+      },
+      {
+        "customerId": 19,
+        "email": "customer019@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-05-14"
+      },
+      {
+        "customerId": 20,
+        "email": "customer020@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-05-21"
+      },
+      {
+        "customerId": 21,
+        "email": "customer021@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-05-28"
+      },
+      {
+        "customerId": 22,
+        "email": "customer022@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-06-04"
+      },
+      {
+        "customerId": 23,
+        "email": "customer023@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-06-11"
+      },
+      {
+        "customerId": 24,
+        "email": "customer024@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-06-18"
+      },
+      {
+        "customerId": 25,
+        "email": "customer025@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-06-25"
+      },
+      {
+        "customerId": 26,
+        "email": "customer026@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-07-02"
+      },
+      {
+        "customerId": 27,
+        "email": "customer027@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-07-09"
+      },
+      {
+        "customerId": 28,
+        "email": "customer028@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-07-16"
+      },
+      {
+        "customerId": 29,
+        "email": "customer029@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-07-23"
+      },
+      {
+        "customerId": 30,
+        "email": "customer030@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-07-30"
+      },
+      {
+        "customerId": 31,
+        "email": "customer031@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-08-06"
+      },
+      {
+        "customerId": 32,
+        "email": "customer032@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-08-13"
+      },
+      {
+        "customerId": 33,
+        "email": "customer033@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-08-20"
+      },
+      {
+        "customerId": 34,
+        "email": "customer034@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-08-27"
+      },
+      {
+        "customerId": 35,
+        "email": "customer035@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-09-03"
+      },
+      {
+        "customerId": 36,
+        "email": "customer036@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-09-10"
+      },
+      {
+        "customerId": 37,
+        "email": "customer037@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-09-17"
+      },
+      {
+        "customerId": 38,
+        "email": "customer038@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-09-24"
+      },
+      {
+        "customerId": 39,
+        "email": "customer039@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-10-01"
+      },
+      {
+        "customerId": 40,
+        "email": "customer040@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-10-08"
+      },
+      {
+        "customerId": 41,
+        "email": "customer041@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-10-15"
+      },
+      {
+        "customerId": 42,
+        "email": "customer042@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-10-22"
+      },
+      {
+        "customerId": 43,
+        "email": "customer043@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-10-29"
+      },
+      {
+        "customerId": 44,
+        "email": "customer044@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-11-05"
+      },
+      {
+        "customerId": 45,
+        "email": "customer045@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-11-12"
+      },
+      {
+        "customerId": 46,
+        "email": "customer046@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-11-19"
+      },
+      {
+        "customerId": 47,
+        "email": "customer047@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-11-26"
+      },
+      {
+        "customerId": 48,
+        "email": "customer048@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-12-03"
+      },
+      {
+        "customerId": 49,
+        "email": "customer049@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2022-12-10"
+      },
+      {
+        "customerId": 50,
+        "email": "customer050@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2022-12-17"
+      },
+      {
+        "customerId": 51,
+        "email": "customer051@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2022-12-24"
+      },
+      {
+        "customerId": 52,
+        "email": "customer052@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2022-12-31"
+      },
+      {
+        "customerId": 53,
+        "email": "customer053@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-01-07"
+      },
+      {
+        "customerId": 54,
+        "email": "customer054@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-01-14"
+      },
+      {
+        "customerId": 55,
+        "email": "customer055@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-01-21"
+      },
+      {
+        "customerId": 56,
+        "email": "customer056@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-01-28"
+      },
+      {
+        "customerId": 57,
+        "email": "customer057@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-02-04"
+      },
+      {
+        "customerId": 58,
+        "email": "customer058@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-02-11"
+      },
+      {
+        "customerId": 59,
+        "email": "customer059@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-02-18"
+      },
+      {
+        "customerId": 60,
+        "email": "customer060@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-02-25"
+      },
+      {
+        "customerId": 61,
+        "email": "customer061@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-03-04"
+      },
+      {
+        "customerId": 62,
+        "email": "customer062@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-03-11"
+      },
+      {
+        "customerId": 63,
+        "email": "customer063@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-03-18"
+      },
+      {
+        "customerId": 64,
+        "email": "customer064@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-03-25"
+      },
+      {
+        "customerId": 65,
+        "email": "customer065@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-04-01"
+      },
+      {
+        "customerId": 66,
+        "email": "customer066@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-04-08"
+      },
+      {
+        "customerId": 67,
+        "email": "customer067@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-04-15"
+      },
+      {
+        "customerId": 68,
+        "email": "customer068@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-04-22"
+      },
+      {
+        "customerId": 69,
+        "email": "customer069@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-04-29"
+      },
+      {
+        "customerId": 70,
+        "email": "customer070@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-05-06"
+      },
+      {
+        "customerId": 71,
+        "email": "customer071@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-05-13"
+      },
+      {
+        "customerId": 72,
+        "email": "customer072@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-05-20"
+      },
+      {
+        "customerId": 73,
+        "email": "customer073@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-05-27"
+      },
+      {
+        "customerId": 74,
+        "email": "customer074@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-06-03"
+      },
+      {
+        "customerId": 75,
+        "email": "customer075@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-06-10"
+      },
+      {
+        "customerId": 76,
+        "email": "customer076@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-06-17"
+      },
+      {
+        "customerId": 77,
+        "email": "customer077@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-06-24"
+      },
+      {
+        "customerId": 78,
+        "email": "customer078@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-07-01"
+      },
+      {
+        "customerId": 79,
+        "email": "customer079@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-07-08"
+      },
+      {
+        "customerId": 80,
+        "email": "customer080@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-07-15"
+      },
+      {
+        "customerId": 81,
+        "email": "customer081@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-07-22"
+      },
+      {
+        "customerId": 82,
+        "email": "customer082@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-07-29"
+      },
+      {
+        "customerId": 83,
+        "email": "customer083@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-08-05"
+      },
+      {
+        "customerId": 84,
+        "email": "customer084@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-08-12"
+      },
+      {
+        "customerId": 85,
+        "email": "customer085@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-08-19"
+      },
+      {
+        "customerId": 86,
+        "email": "customer086@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-08-26"
+      },
+      {
+        "customerId": 87,
+        "email": "customer087@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-09-02"
+      },
+      {
+        "customerId": 88,
+        "email": "customer088@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-09-09"
+      },
+      {
+        "customerId": 89,
+        "email": "customer089@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-09-16"
+      },
+      {
+        "customerId": 90,
+        "email": "customer090@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-09-23"
+      },
+      {
+        "customerId": 91,
+        "email": "customer091@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-09-30"
+      },
+      {
+        "customerId": 92,
+        "email": "customer092@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-10-07"
+      },
+      {
+        "customerId": 93,
+        "email": "customer093@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-10-14"
+      },
+      {
+        "customerId": 94,
+        "email": "customer094@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-10-21"
+      },
+      {
+        "customerId": 95,
+        "email": "customer095@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-10-28"
+      },
+      {
+        "customerId": 96,
+        "email": "customer096@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-11-04"
+      },
+      {
+        "customerId": 97,
+        "email": "customer097@example.com",
+        "segment": "new",
+        "region": "NA",
+        "signupDate": "2023-11-11"
+      },
+      {
+        "customerId": 98,
+        "email": "customer098@example.com",
+        "segment": "loyal",
+        "region": "EU",
+        "signupDate": "2023-11-18"
+      },
+      {
+        "customerId": 99,
+        "email": "customer099@example.com",
+        "segment": "vip",
+        "region": "APAC",
+        "signupDate": "2023-11-25"
+      },
+      {
+        "customerId": 100,
+        "email": "customer100@example.com",
+        "segment": "at_risk",
+        "region": "LATAM",
+        "signupDate": "2023-12-02"
+      }
+    ],
+    "Order_DMO": [
+      {
+        "orderId": 1001,
+        "customerId": 1,
+        "orderDate": "2026-01-02",
+        "grossRevenue": 62.5,
+        "discountAmount": 0,
+        "netRevenue": 62.5
+      },
+      {
+        "orderId": 1002,
+        "customerId": 2,
+        "orderDate": "2026-01-03",
+        "grossRevenue": 75,
+        "discountAmount": 0,
+        "netRevenue": 75
+      },
+      {
+        "orderId": 1003,
+        "customerId": 3,
+        "orderDate": "2026-01-04",
+        "grossRevenue": 87.5,
+        "discountAmount": 8.75,
+        "netRevenue": 78.75
+      },
+      {
+        "orderId": 1004,
+        "customerId": 4,
+        "orderDate": "2026-01-05",
+        "grossRevenue": 100,
+        "discountAmount": 0,
+        "netRevenue": 100
+      },
+      {
+        "orderId": 1005,
+        "customerId": 5,
+        "orderDate": "2026-01-06",
+        "grossRevenue": 112.5,
+        "discountAmount": 0,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1006,
+        "customerId": 6,
+        "orderDate": "2026-01-07",
+        "grossRevenue": 125,
+        "discountAmount": 12.5,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1007,
+        "customerId": 7,
+        "orderDate": "2026-01-08",
+        "grossRevenue": 137.5,
+        "discountAmount": 0,
+        "netRevenue": 137.5
+      },
+      {
+        "orderId": 1008,
+        "customerId": 8,
+        "orderDate": "2026-01-09",
+        "grossRevenue": 150,
+        "discountAmount": 0,
+        "netRevenue": 150
+      },
+      {
+        "orderId": 1009,
+        "customerId": 9,
+        "orderDate": "2026-01-10",
+        "grossRevenue": 162.5,
+        "discountAmount": 16.25,
+        "netRevenue": 146.25
+      },
+      {
+        "orderId": 1010,
+        "customerId": 10,
+        "orderDate": "2026-01-11",
+        "grossRevenue": 175,
+        "discountAmount": 0,
+        "netRevenue": 175
+      },
+      {
+        "orderId": 1011,
+        "customerId": 11,
+        "orderDate": "2026-01-12",
+        "grossRevenue": 187.5,
+        "discountAmount": 0,
+        "netRevenue": 187.5
+      },
+      {
+        "orderId": 1012,
+        "customerId": 12,
+        "orderDate": "2026-01-13",
+        "grossRevenue": 200,
+        "discountAmount": 20,
+        "netRevenue": 180
+      },
+      {
+        "orderId": 1013,
+        "customerId": 13,
+        "orderDate": "2026-01-14",
+        "grossRevenue": 212.5,
+        "discountAmount": 0,
+        "netRevenue": 212.5
+      },
+      {
+        "orderId": 1014,
+        "customerId": 14,
+        "orderDate": "2026-01-15",
+        "grossRevenue": 225,
+        "discountAmount": 0,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1015,
+        "customerId": 15,
+        "orderDate": "2026-01-16",
+        "grossRevenue": 237.5,
+        "discountAmount": 23.75,
+        "netRevenue": 213.75
+      },
+      {
+        "orderId": 1016,
+        "customerId": 16,
+        "orderDate": "2026-01-17",
+        "grossRevenue": 250,
+        "discountAmount": 0,
+        "netRevenue": 250
+      },
+      {
+        "orderId": 1017,
+        "customerId": 17,
+        "orderDate": "2026-01-18",
+        "grossRevenue": 262.5,
+        "discountAmount": 0,
+        "netRevenue": 262.5
+      },
+      {
+        "orderId": 1018,
+        "customerId": 18,
+        "orderDate": "2026-01-19",
+        "grossRevenue": 275,
+        "discountAmount": 27.5,
+        "netRevenue": 247.5
+      },
+      {
+        "orderId": 1019,
+        "customerId": 19,
+        "orderDate": "2026-01-20",
+        "grossRevenue": 287.5,
+        "discountAmount": 0,
+        "netRevenue": 287.5
+      },
+      {
+        "orderId": 1020,
+        "customerId": 20,
+        "orderDate": "2026-01-21",
+        "grossRevenue": 50,
+        "discountAmount": 0,
+        "netRevenue": 50
+      },
+      {
+        "orderId": 1021,
+        "customerId": 21,
+        "orderDate": "2026-01-22",
+        "grossRevenue": 62.5,
+        "discountAmount": 6.25,
+        "netRevenue": 56.25
+      },
+      {
+        "orderId": 1022,
+        "customerId": 22,
+        "orderDate": "2026-01-23",
+        "grossRevenue": 75,
+        "discountAmount": 0,
+        "netRevenue": 75
+      },
+      {
+        "orderId": 1023,
+        "customerId": 23,
+        "orderDate": "2026-01-24",
+        "grossRevenue": 87.5,
+        "discountAmount": 0,
+        "netRevenue": 87.5
+      },
+      {
+        "orderId": 1024,
+        "customerId": 24,
+        "orderDate": "2026-01-25",
+        "grossRevenue": 100,
+        "discountAmount": 10,
+        "netRevenue": 90
+      },
+      {
+        "orderId": 1025,
+        "customerId": 25,
+        "orderDate": "2026-01-26",
+        "grossRevenue": 112.5,
+        "discountAmount": 0,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1026,
+        "customerId": 26,
+        "orderDate": "2026-01-27",
+        "grossRevenue": 125,
+        "discountAmount": 0,
+        "netRevenue": 125
+      },
+      {
+        "orderId": 1027,
+        "customerId": 27,
+        "orderDate": "2026-01-28",
+        "grossRevenue": 137.5,
+        "discountAmount": 13.75,
+        "netRevenue": 123.75
+      },
+      {
+        "orderId": 1028,
+        "customerId": 28,
+        "orderDate": "2026-01-29",
+        "grossRevenue": 150,
+        "discountAmount": 0,
+        "netRevenue": 150
+      },
+      {
+        "orderId": 1029,
+        "customerId": 29,
+        "orderDate": "2026-01-30",
+        "grossRevenue": 162.5,
+        "discountAmount": 0,
+        "netRevenue": 162.5
+      },
+      {
+        "orderId": 1030,
+        "customerId": 30,
+        "orderDate": "2026-01-31",
+        "grossRevenue": 175,
+        "discountAmount": 17.5,
+        "netRevenue": 157.5
+      },
+      {
+        "orderId": 1031,
+        "customerId": 31,
+        "orderDate": "2026-02-01",
+        "grossRevenue": 187.5,
+        "discountAmount": 0,
+        "netRevenue": 187.5
+      },
+      {
+        "orderId": 1032,
+        "customerId": 32,
+        "orderDate": "2026-02-02",
+        "grossRevenue": 200,
+        "discountAmount": 0,
+        "netRevenue": 200
+      },
+      {
+        "orderId": 1033,
+        "customerId": 33,
+        "orderDate": "2026-02-03",
+        "grossRevenue": 212.5,
+        "discountAmount": 21.25,
+        "netRevenue": 191.25
+      },
+      {
+        "orderId": 1034,
+        "customerId": 34,
+        "orderDate": "2026-02-04",
+        "grossRevenue": 225,
+        "discountAmount": 0,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1035,
+        "customerId": 35,
+        "orderDate": "2026-02-05",
+        "grossRevenue": 237.5,
+        "discountAmount": 0,
+        "netRevenue": 237.5
+      },
+      {
+        "orderId": 1036,
+        "customerId": 36,
+        "orderDate": "2026-02-06",
+        "grossRevenue": 250,
+        "discountAmount": 25,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1037,
+        "customerId": 37,
+        "orderDate": "2026-02-07",
+        "grossRevenue": 262.5,
+        "discountAmount": 0,
+        "netRevenue": 262.5
+      },
+      {
+        "orderId": 1038,
+        "customerId": 38,
+        "orderDate": "2026-02-08",
+        "grossRevenue": 275,
+        "discountAmount": 0,
+        "netRevenue": 275
+      },
+      {
+        "orderId": 1039,
+        "customerId": 39,
+        "orderDate": "2026-02-09",
+        "grossRevenue": 287.5,
+        "discountAmount": 28.75,
+        "netRevenue": 258.75
+      },
+      {
+        "orderId": 1040,
+        "customerId": 40,
+        "orderDate": "2026-02-10",
+        "grossRevenue": 50,
+        "discountAmount": 0,
+        "netRevenue": 50
+      },
+      {
+        "orderId": 1041,
+        "customerId": 41,
+        "orderDate": "2026-02-11",
+        "grossRevenue": 62.5,
+        "discountAmount": 0,
+        "netRevenue": 62.5
+      },
+      {
+        "orderId": 1042,
+        "customerId": 42,
+        "orderDate": "2026-02-12",
+        "grossRevenue": 75,
+        "discountAmount": 7.5,
+        "netRevenue": 67.5
+      },
+      {
+        "orderId": 1043,
+        "customerId": 43,
+        "orderDate": "2026-02-13",
+        "grossRevenue": 87.5,
+        "discountAmount": 0,
+        "netRevenue": 87.5
+      },
+      {
+        "orderId": 1044,
+        "customerId": 44,
+        "orderDate": "2026-02-14",
+        "grossRevenue": 100,
+        "discountAmount": 0,
+        "netRevenue": 100
+      },
+      {
+        "orderId": 1045,
+        "customerId": 45,
+        "orderDate": "2026-02-15",
+        "grossRevenue": 112.5,
+        "discountAmount": 11.25,
+        "netRevenue": 101.25
+      },
+      {
+        "orderId": 1046,
+        "customerId": 46,
+        "orderDate": "2026-02-16",
+        "grossRevenue": 125,
+        "discountAmount": 0,
+        "netRevenue": 125
+      },
+      {
+        "orderId": 1047,
+        "customerId": 47,
+        "orderDate": "2026-02-17",
+        "grossRevenue": 137.5,
+        "discountAmount": 0,
+        "netRevenue": 137.5
+      },
+      {
+        "orderId": 1048,
+        "customerId": 48,
+        "orderDate": "2026-02-18",
+        "grossRevenue": 150,
+        "discountAmount": 15,
+        "netRevenue": 135
+      },
+      {
+        "orderId": 1049,
+        "customerId": 49,
+        "orderDate": "2026-02-19",
+        "grossRevenue": 162.5,
+        "discountAmount": 0,
+        "netRevenue": 162.5
+      },
+      {
+        "orderId": 1050,
+        "customerId": 50,
+        "orderDate": "2026-02-20",
+        "grossRevenue": 175,
+        "discountAmount": 0,
+        "netRevenue": 175
+      },
+      {
+        "orderId": 1051,
+        "customerId": 51,
+        "orderDate": "2026-02-21",
+        "grossRevenue": 187.5,
+        "discountAmount": 18.75,
+        "netRevenue": 168.75
+      },
+      {
+        "orderId": 1052,
+        "customerId": 52,
+        "orderDate": "2026-02-22",
+        "grossRevenue": 200,
+        "discountAmount": 0,
+        "netRevenue": 200
+      },
+      {
+        "orderId": 1053,
+        "customerId": 53,
+        "orderDate": "2026-02-23",
+        "grossRevenue": 212.5,
+        "discountAmount": 0,
+        "netRevenue": 212.5
+      },
+      {
+        "orderId": 1054,
+        "customerId": 54,
+        "orderDate": "2026-02-24",
+        "grossRevenue": 225,
+        "discountAmount": 22.5,
+        "netRevenue": 202.5
+      },
+      {
+        "orderId": 1055,
+        "customerId": 55,
+        "orderDate": "2026-02-25",
+        "grossRevenue": 237.5,
+        "discountAmount": 0,
+        "netRevenue": 237.5
+      },
+      {
+        "orderId": 1056,
+        "customerId": 56,
+        "orderDate": "2026-02-26",
+        "grossRevenue": 250,
+        "discountAmount": 0,
+        "netRevenue": 250
+      },
+      {
+        "orderId": 1057,
+        "customerId": 57,
+        "orderDate": "2026-02-27",
+        "grossRevenue": 262.5,
+        "discountAmount": 26.25,
+        "netRevenue": 236.25
+      },
+      {
+        "orderId": 1058,
+        "customerId": 58,
+        "orderDate": "2026-02-28",
+        "grossRevenue": 275,
+        "discountAmount": 0,
+        "netRevenue": 275
+      },
+      {
+        "orderId": 1059,
+        "customerId": 59,
+        "orderDate": "2026-03-01",
+        "grossRevenue": 287.5,
+        "discountAmount": 0,
+        "netRevenue": 287.5
+      },
+      {
+        "orderId": 1060,
+        "customerId": 60,
+        "orderDate": "2026-03-02",
+        "grossRevenue": 50,
+        "discountAmount": 5,
+        "netRevenue": 45
+      },
+      {
+        "orderId": 1061,
+        "customerId": 61,
+        "orderDate": "2026-03-03",
+        "grossRevenue": 62.5,
+        "discountAmount": 0,
+        "netRevenue": 62.5
+      },
+      {
+        "orderId": 1062,
+        "customerId": 62,
+        "orderDate": "2026-03-04",
+        "grossRevenue": 75,
+        "discountAmount": 0,
+        "netRevenue": 75
+      },
+      {
+        "orderId": 1063,
+        "customerId": 63,
+        "orderDate": "2026-03-05",
+        "grossRevenue": 87.5,
+        "discountAmount": 8.75,
+        "netRevenue": 78.75
+      },
+      {
+        "orderId": 1064,
+        "customerId": 64,
+        "orderDate": "2026-03-06",
+        "grossRevenue": 100,
+        "discountAmount": 0,
+        "netRevenue": 100
+      },
+      {
+        "orderId": 1065,
+        "customerId": 65,
+        "orderDate": "2026-03-07",
+        "grossRevenue": 112.5,
+        "discountAmount": 0,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1066,
+        "customerId": 66,
+        "orderDate": "2026-03-08",
+        "grossRevenue": 125,
+        "discountAmount": 12.5,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1067,
+        "customerId": 67,
+        "orderDate": "2026-03-09",
+        "grossRevenue": 137.5,
+        "discountAmount": 0,
+        "netRevenue": 137.5
+      },
+      {
+        "orderId": 1068,
+        "customerId": 68,
+        "orderDate": "2026-03-10",
+        "grossRevenue": 150,
+        "discountAmount": 0,
+        "netRevenue": 150
+      },
+      {
+        "orderId": 1069,
+        "customerId": 69,
+        "orderDate": "2026-03-11",
+        "grossRevenue": 162.5,
+        "discountAmount": 16.25,
+        "netRevenue": 146.25
+      },
+      {
+        "orderId": 1070,
+        "customerId": 70,
+        "orderDate": "2026-03-12",
+        "grossRevenue": 175,
+        "discountAmount": 0,
+        "netRevenue": 175
+      },
+      {
+        "orderId": 1071,
+        "customerId": 71,
+        "orderDate": "2026-03-13",
+        "grossRevenue": 187.5,
+        "discountAmount": 0,
+        "netRevenue": 187.5
+      },
+      {
+        "orderId": 1072,
+        "customerId": 72,
+        "orderDate": "2026-03-14",
+        "grossRevenue": 200,
+        "discountAmount": 20,
+        "netRevenue": 180
+      },
+      {
+        "orderId": 1073,
+        "customerId": 73,
+        "orderDate": "2026-03-15",
+        "grossRevenue": 212.5,
+        "discountAmount": 0,
+        "netRevenue": 212.5
+      },
+      {
+        "orderId": 1074,
+        "customerId": 74,
+        "orderDate": "2026-03-16",
+        "grossRevenue": 225,
+        "discountAmount": 0,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1075,
+        "customerId": 75,
+        "orderDate": "2026-03-17",
+        "grossRevenue": 237.5,
+        "discountAmount": 23.75,
+        "netRevenue": 213.75
+      },
+      {
+        "orderId": 1076,
+        "customerId": 76,
+        "orderDate": "2026-03-18",
+        "grossRevenue": 250,
+        "discountAmount": 0,
+        "netRevenue": 250
+      },
+      {
+        "orderId": 1077,
+        "customerId": 77,
+        "orderDate": "2026-03-19",
+        "grossRevenue": 262.5,
+        "discountAmount": 0,
+        "netRevenue": 262.5
+      },
+      {
+        "orderId": 1078,
+        "customerId": 78,
+        "orderDate": "2026-03-20",
+        "grossRevenue": 275,
+        "discountAmount": 27.5,
+        "netRevenue": 247.5
+      },
+      {
+        "orderId": 1079,
+        "customerId": 79,
+        "orderDate": "2026-03-21",
+        "grossRevenue": 287.5,
+        "discountAmount": 0,
+        "netRevenue": 287.5
+      },
+      {
+        "orderId": 1080,
+        "customerId": 80,
+        "orderDate": "2026-03-22",
+        "grossRevenue": 50,
+        "discountAmount": 0,
+        "netRevenue": 50
+      },
+      {
+        "orderId": 1081,
+        "customerId": 81,
+        "orderDate": "2026-03-23",
+        "grossRevenue": 62.5,
+        "discountAmount": 6.25,
+        "netRevenue": 56.25
+      },
+      {
+        "orderId": 1082,
+        "customerId": 82,
+        "orderDate": "2026-03-24",
+        "grossRevenue": 75,
+        "discountAmount": 0,
+        "netRevenue": 75
+      },
+      {
+        "orderId": 1083,
+        "customerId": 83,
+        "orderDate": "2026-03-25",
+        "grossRevenue": 87.5,
+        "discountAmount": 0,
+        "netRevenue": 87.5
+      },
+      {
+        "orderId": 1084,
+        "customerId": 84,
+        "orderDate": "2026-03-26",
+        "grossRevenue": 100,
+        "discountAmount": 10,
+        "netRevenue": 90
+      },
+      {
+        "orderId": 1085,
+        "customerId": 85,
+        "orderDate": "2026-03-27",
+        "grossRevenue": 112.5,
+        "discountAmount": 0,
+        "netRevenue": 112.5
+      },
+      {
+        "orderId": 1086,
+        "customerId": 86,
+        "orderDate": "2026-03-28",
+        "grossRevenue": 125,
+        "discountAmount": 0,
+        "netRevenue": 125
+      },
+      {
+        "orderId": 1087,
+        "customerId": 87,
+        "orderDate": "2026-03-29",
+        "grossRevenue": 137.5,
+        "discountAmount": 13.75,
+        "netRevenue": 123.75
+      },
+      {
+        "orderId": 1088,
+        "customerId": 88,
+        "orderDate": "2026-03-30",
+        "grossRevenue": 150,
+        "discountAmount": 0,
+        "netRevenue": 150
+      },
+      {
+        "orderId": 1089,
+        "customerId": 89,
+        "orderDate": "2026-03-31",
+        "grossRevenue": 162.5,
+        "discountAmount": 0,
+        "netRevenue": 162.5
+      },
+      {
+        "orderId": 1090,
+        "customerId": 90,
+        "orderDate": "2026-04-01",
+        "grossRevenue": 175,
+        "discountAmount": 17.5,
+        "netRevenue": 157.5
+      },
+      {
+        "orderId": 1091,
+        "customerId": 91,
+        "orderDate": "2026-04-02",
+        "grossRevenue": 187.5,
+        "discountAmount": 0,
+        "netRevenue": 187.5
+      },
+      {
+        "orderId": 1092,
+        "customerId": 92,
+        "orderDate": "2026-04-03",
+        "grossRevenue": 200,
+        "discountAmount": 0,
+        "netRevenue": 200
+      },
+      {
+        "orderId": 1093,
+        "customerId": 93,
+        "orderDate": "2026-04-04",
+        "grossRevenue": 212.5,
+        "discountAmount": 21.25,
+        "netRevenue": 191.25
+      },
+      {
+        "orderId": 1094,
+        "customerId": 94,
+        "orderDate": "2026-04-05",
+        "grossRevenue": 225,
+        "discountAmount": 0,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1095,
+        "customerId": 95,
+        "orderDate": "2026-04-06",
+        "grossRevenue": 237.5,
+        "discountAmount": 0,
+        "netRevenue": 237.5
+      },
+      {
+        "orderId": 1096,
+        "customerId": 96,
+        "orderDate": "2026-04-07",
+        "grossRevenue": 250,
+        "discountAmount": 25,
+        "netRevenue": 225
+      },
+      {
+        "orderId": 1097,
+        "customerId": 97,
+        "orderDate": "2026-04-08",
+        "grossRevenue": 262.5,
+        "discountAmount": 0,
+        "netRevenue": 262.5
+      },
+      {
+        "orderId": 1098,
+        "customerId": 98,
+        "orderDate": "2026-04-09",
+        "grossRevenue": 275,
+        "discountAmount": 0,
+        "netRevenue": 275
+      },
+      {
+        "orderId": 1099,
+        "customerId": 99,
+        "orderDate": "2026-04-10",
+        "grossRevenue": 287.5,
+        "discountAmount": 28.75,
+        "netRevenue": 258.75
+      },
+      {
+        "orderId": 1100,
+        "customerId": 100,
+        "orderDate": "2026-04-11",
+        "grossRevenue": 50,
+        "discountAmount": 0,
+        "netRevenue": 50
+      }
+    ],
+    "Return_DMO": [
+      {
+        "returnId": "R-2001",
+        "orderId": 1001,
+        "customerId": 1,
+        "returnDate": "2026-02-02",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2002",
+        "orderId": 1002,
+        "customerId": 2,
+        "returnDate": "2026-02-03",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2003",
+        "orderId": 1003,
+        "customerId": 3,
+        "returnDate": "2026-02-04",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2004",
+        "orderId": 1004,
+        "customerId": 4,
+        "returnDate": "2026-02-05",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2005",
+        "orderId": 1005,
+        "customerId": 5,
+        "returnDate": "2026-02-06",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2006",
+        "orderId": 1006,
+        "customerId": 6,
+        "returnDate": "2026-02-07",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2007",
+        "orderId": 1007,
+        "customerId": 7,
+        "returnDate": "2026-02-08",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2008",
+        "orderId": 1008,
+        "customerId": 8,
+        "returnDate": "2026-02-09",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2009",
+        "orderId": 1009,
+        "customerId": 9,
+        "returnDate": "2026-02-10",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2010",
+        "orderId": 1010,
+        "customerId": 10,
+        "returnDate": "2026-02-11",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2011",
+        "orderId": 1011,
+        "customerId": 11,
+        "returnDate": "2026-02-12",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2012",
+        "orderId": 1012,
+        "customerId": 12,
+        "returnDate": "2026-02-13",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2013",
+        "orderId": 1013,
+        "customerId": 13,
+        "returnDate": "2026-02-14",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2014",
+        "orderId": 1014,
+        "customerId": 14,
+        "returnDate": "2026-02-15",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2015",
+        "orderId": 1015,
+        "customerId": 15,
+        "returnDate": "2026-02-16",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2016",
+        "orderId": 1016,
+        "customerId": 16,
+        "returnDate": "2026-02-17",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2017",
+        "orderId": 1017,
+        "customerId": 17,
+        "returnDate": "2026-02-18",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2018",
+        "orderId": 1018,
+        "customerId": 18,
+        "returnDate": "2026-02-19",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2019",
+        "orderId": 1019,
+        "customerId": 19,
+        "returnDate": "2026-02-20",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2020",
+        "orderId": 1020,
+        "customerId": 20,
+        "returnDate": "2026-02-21",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2021",
+        "orderId": 1021,
+        "customerId": 21,
+        "returnDate": "2026-02-22",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2022",
+        "orderId": 1022,
+        "customerId": 22,
+        "returnDate": "2026-02-23",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2023",
+        "orderId": 1023,
+        "customerId": 23,
+        "returnDate": "2026-02-24",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2024",
+        "orderId": 1024,
+        "customerId": 24,
+        "returnDate": "2026-02-25",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2025",
+        "orderId": 1025,
+        "customerId": 25,
+        "returnDate": "2026-02-26",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2026",
+        "orderId": 1026,
+        "customerId": 26,
+        "returnDate": "2026-02-27",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2027",
+        "orderId": 1027,
+        "customerId": 27,
+        "returnDate": "2026-02-28",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2028",
+        "orderId": 1028,
+        "customerId": 28,
+        "returnDate": "2026-03-01",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2029",
+        "orderId": 1029,
+        "customerId": 29,
+        "returnDate": "2026-03-02",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2030",
+        "orderId": 1030,
+        "customerId": 30,
+        "returnDate": "2026-03-03",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2031",
+        "orderId": 1031,
+        "customerId": 31,
+        "returnDate": "2026-03-04",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2032",
+        "orderId": 1032,
+        "customerId": 32,
+        "returnDate": "2026-03-05",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2033",
+        "orderId": 1033,
+        "customerId": 33,
+        "returnDate": "2026-03-06",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2034",
+        "orderId": 1034,
+        "customerId": 34,
+        "returnDate": "2026-03-07",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2035",
+        "orderId": 1035,
+        "customerId": 35,
+        "returnDate": "2026-03-08",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2036",
+        "orderId": 1036,
+        "customerId": 36,
+        "returnDate": "2026-03-09",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2037",
+        "orderId": 1037,
+        "customerId": 37,
+        "returnDate": "2026-03-10",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2038",
+        "orderId": 1038,
+        "customerId": 38,
+        "returnDate": "2026-03-11",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2039",
+        "orderId": 1039,
+        "customerId": 39,
+        "returnDate": "2026-03-12",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2040",
+        "orderId": 1040,
+        "customerId": 40,
+        "returnDate": "2026-03-13",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2041",
+        "orderId": 1041,
+        "customerId": 41,
+        "returnDate": "2026-03-14",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2042",
+        "orderId": 1042,
+        "customerId": 42,
+        "returnDate": "2026-03-15",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2043",
+        "orderId": 1043,
+        "customerId": 43,
+        "returnDate": "2026-03-16",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2044",
+        "orderId": 1044,
+        "customerId": 44,
+        "returnDate": "2026-03-17",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2045",
+        "orderId": 1045,
+        "customerId": 45,
+        "returnDate": "2026-03-18",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2046",
+        "orderId": 1046,
+        "customerId": 46,
+        "returnDate": "2026-03-19",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2047",
+        "orderId": 1047,
+        "customerId": 47,
+        "returnDate": "2026-03-20",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2048",
+        "orderId": 1048,
+        "customerId": 48,
+        "returnDate": "2026-03-21",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2049",
+        "orderId": 1049,
+        "customerId": 49,
+        "returnDate": "2026-03-22",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2050",
+        "orderId": 1050,
+        "customerId": 50,
+        "returnDate": "2026-03-23",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2051",
+        "orderId": 1051,
+        "customerId": 51,
+        "returnDate": "2026-03-24",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2052",
+        "orderId": 1052,
+        "customerId": 52,
+        "returnDate": "2026-03-25",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2053",
+        "orderId": 1053,
+        "customerId": 53,
+        "returnDate": "2026-03-26",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2054",
+        "orderId": 1054,
+        "customerId": 54,
+        "returnDate": "2026-03-27",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2055",
+        "orderId": 1055,
+        "customerId": 55,
+        "returnDate": "2026-03-28",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2056",
+        "orderId": 1056,
+        "customerId": 56,
+        "returnDate": "2026-03-29",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2057",
+        "orderId": 1057,
+        "customerId": 57,
+        "returnDate": "2026-03-30",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2058",
+        "orderId": 1058,
+        "customerId": 58,
+        "returnDate": "2026-03-31",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2059",
+        "orderId": 1059,
+        "customerId": 59,
+        "returnDate": "2026-04-01",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2060",
+        "orderId": 1060,
+        "customerId": 60,
+        "returnDate": "2026-04-02",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2061",
+        "orderId": 1061,
+        "customerId": 61,
+        "returnDate": "2026-04-03",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2062",
+        "orderId": 1062,
+        "customerId": 62,
+        "returnDate": "2026-04-04",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2063",
+        "orderId": 1063,
+        "customerId": 63,
+        "returnDate": "2026-04-05",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2064",
+        "orderId": 1064,
+        "customerId": 64,
+        "returnDate": "2026-04-06",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2065",
+        "orderId": 1065,
+        "customerId": 65,
+        "returnDate": "2026-04-07",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2066",
+        "orderId": 1066,
+        "customerId": 66,
+        "returnDate": "2026-04-08",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2067",
+        "orderId": 1067,
+        "customerId": 67,
+        "returnDate": "2026-04-09",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2068",
+        "orderId": 1068,
+        "customerId": 68,
+        "returnDate": "2026-04-10",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2069",
+        "orderId": 1069,
+        "customerId": 69,
+        "returnDate": "2026-04-11",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2070",
+        "orderId": 1070,
+        "customerId": 70,
+        "returnDate": "2026-04-12",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2071",
+        "orderId": 1071,
+        "customerId": 71,
+        "returnDate": "2026-04-13",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2072",
+        "orderId": 1072,
+        "customerId": 72,
+        "returnDate": "2026-04-14",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2073",
+        "orderId": 1073,
+        "customerId": 73,
+        "returnDate": "2026-04-15",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2074",
+        "orderId": 1074,
+        "customerId": 74,
+        "returnDate": "2026-04-16",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2075",
+        "orderId": 1075,
+        "customerId": 75,
+        "returnDate": "2026-04-17",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2076",
+        "orderId": 1076,
+        "customerId": 76,
+        "returnDate": "2026-04-18",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2077",
+        "orderId": 1077,
+        "customerId": 77,
+        "returnDate": "2026-04-19",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2078",
+        "orderId": 1078,
+        "customerId": 78,
+        "returnDate": "2026-04-20",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2079",
+        "orderId": 1079,
+        "customerId": 79,
+        "returnDate": "2026-04-21",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2080",
+        "orderId": 1080,
+        "customerId": 80,
+        "returnDate": "2026-04-22",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2081",
+        "orderId": 1081,
+        "customerId": 81,
+        "returnDate": "2026-04-23",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2082",
+        "orderId": 1082,
+        "customerId": 82,
+        "returnDate": "2026-04-24",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2083",
+        "orderId": 1083,
+        "customerId": 83,
+        "returnDate": "2026-04-25",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2084",
+        "orderId": 1084,
+        "customerId": 84,
+        "returnDate": "2026-04-26",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2085",
+        "orderId": 1085,
+        "customerId": 85,
+        "returnDate": "2026-04-27",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2086",
+        "orderId": 1086,
+        "customerId": 86,
+        "returnDate": "2026-04-28",
+        "refundAmount": 46.25,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2087",
+        "orderId": 1087,
+        "customerId": 87,
+        "returnDate": "2026-04-29",
+        "refundAmount": 50,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2088",
+        "orderId": 1088,
+        "customerId": 88,
+        "returnDate": "2026-04-30",
+        "refundAmount": 53.75,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2089",
+        "orderId": 1089,
+        "customerId": 89,
+        "returnDate": "2026-05-01",
+        "refundAmount": 57.5,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2090",
+        "orderId": 1090,
+        "customerId": 90,
+        "returnDate": "2026-05-02",
+        "refundAmount": 5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2091",
+        "orderId": 1091,
+        "customerId": 91,
+        "returnDate": "2026-05-03",
+        "refundAmount": 8.75,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2092",
+        "orderId": 1092,
+        "customerId": 92,
+        "returnDate": "2026-05-04",
+        "refundAmount": 12.5,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2093",
+        "orderId": 1093,
+        "customerId": 93,
+        "returnDate": "2026-05-05",
+        "refundAmount": 16.25,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2094",
+        "orderId": 1094,
+        "customerId": 94,
+        "returnDate": "2026-05-06",
+        "refundAmount": 20,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2095",
+        "orderId": 1095,
+        "customerId": 95,
+        "returnDate": "2026-05-07",
+        "refundAmount": 23.75,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2096",
+        "orderId": 1096,
+        "customerId": 96,
+        "returnDate": "2026-05-08",
+        "refundAmount": 27.5,
+        "reason": "size_issue",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2097",
+        "orderId": 1097,
+        "customerId": 97,
+        "returnDate": "2026-05-09",
+        "refundAmount": 31.25,
+        "reason": "damaged_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2098",
+        "orderId": 1098,
+        "customerId": 98,
+        "returnDate": "2026-05-10",
+        "refundAmount": 35,
+        "reason": "late_delivery",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2099",
+        "orderId": 1099,
+        "customerId": 99,
+        "returnDate": "2026-05-11",
+        "refundAmount": 38.75,
+        "reason": "changed_mind",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      },
+      {
+        "returnId": "R-2100",
+        "orderId": 1100,
+        "customerId": 100,
+        "returnDate": "2026-05-12",
+        "refundAmount": 42.5,
+        "reason": "wrong_item",
+        "referencesKnownOrder": true,
+        "customerMatchesOrder": true
+      }
+    ],
+    "Subscription_DMO": [
+      {
+        "subscriptionId": "S-001",
+        "customerId": 1,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-01-11",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-002",
+        "customerId": 2,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-01-21",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-003",
+        "customerId": 3,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-01-31",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-004",
+        "customerId": 4,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-02-10",
+        "endDate": "2025-02-09"
+      },
+      {
+        "subscriptionId": "S-005",
+        "customerId": 5,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-02-20",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-006",
+        "customerId": 6,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-03-01",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-007",
+        "customerId": 7,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-03-11",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-008",
+        "customerId": 8,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-03-21",
+        "endDate": "2025-03-21"
+      },
+      {
+        "subscriptionId": "S-009",
+        "customerId": 9,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-03-31",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-010",
+        "customerId": 10,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-04-10",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-011",
+        "customerId": 11,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-04-20",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-012",
+        "customerId": 12,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-04-30",
+        "endDate": "2025-04-30"
+      },
+      {
+        "subscriptionId": "S-013",
+        "customerId": 13,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-05-10",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-014",
+        "customerId": 14,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-05-20",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-015",
+        "customerId": 15,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-05-30",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-016",
+        "customerId": 16,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-06-09",
+        "endDate": "2025-06-09"
+      },
+      {
+        "subscriptionId": "S-017",
+        "customerId": 17,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-06-19",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-018",
+        "customerId": 18,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-06-29",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-019",
+        "customerId": 19,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-07-09",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-020",
+        "customerId": 20,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-07-19",
+        "endDate": "2025-07-19"
+      },
+      {
+        "subscriptionId": "S-021",
+        "customerId": 21,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-07-29",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-022",
+        "customerId": 22,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-08-08",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-023",
+        "customerId": 23,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-08-18",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-024",
+        "customerId": 24,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-08-28",
+        "endDate": "2025-08-28"
+      },
+      {
+        "subscriptionId": "S-025",
+        "customerId": 25,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-09-07",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-026",
+        "customerId": 26,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-09-17",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-027",
+        "customerId": 27,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-09-27",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-028",
+        "customerId": 28,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-10-07",
+        "endDate": "2025-10-07"
+      },
+      {
+        "subscriptionId": "S-029",
+        "customerId": 29,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-10-17",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-030",
+        "customerId": 30,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-10-27",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-031",
+        "customerId": 31,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-11-06",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-032",
+        "customerId": 32,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-11-16",
+        "endDate": "2025-11-16"
+      },
+      {
+        "subscriptionId": "S-033",
+        "customerId": 33,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2024-11-26",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-034",
+        "customerId": 34,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2024-12-06",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-035",
+        "customerId": 35,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2024-12-16",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-036",
+        "customerId": 36,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2024-12-26",
+        "endDate": "2025-12-26"
+      },
+      {
+        "subscriptionId": "S-037",
+        "customerId": 37,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-01-05",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-038",
+        "customerId": 38,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-01-15",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-039",
+        "customerId": 39,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-01-25",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-040",
+        "customerId": 40,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-02-04",
+        "endDate": "2026-02-04"
+      },
+      {
+        "subscriptionId": "S-041",
+        "customerId": 41,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-02-14",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-042",
+        "customerId": 42,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-02-24",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-043",
+        "customerId": 43,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-03-06",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-044",
+        "customerId": 44,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-03-16",
+        "endDate": "2026-03-16"
+      },
+      {
+        "subscriptionId": "S-045",
+        "customerId": 45,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-03-26",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-046",
+        "customerId": 46,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-04-05",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-047",
+        "customerId": 47,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-04-15",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-048",
+        "customerId": 48,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-04-25",
+        "endDate": "2026-04-25"
+      },
+      {
+        "subscriptionId": "S-049",
+        "customerId": 49,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-05-05",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-050",
+        "customerId": 50,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-05-15",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-051",
+        "customerId": 51,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-05-25",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-052",
+        "customerId": 52,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-06-04",
+        "endDate": "2026-06-04"
+      },
+      {
+        "subscriptionId": "S-053",
+        "customerId": 53,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-06-14",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-054",
+        "customerId": 54,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-06-24",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-055",
+        "customerId": 55,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-07-04",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-056",
+        "customerId": 56,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-07-14",
+        "endDate": "2026-07-14"
+      },
+      {
+        "subscriptionId": "S-057",
+        "customerId": 57,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-07-24",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-058",
+        "customerId": 58,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-08-03",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-059",
+        "customerId": 59,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-08-13",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-060",
+        "customerId": 60,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-08-23",
+        "endDate": "2026-08-23"
+      },
+      {
+        "subscriptionId": "S-061",
+        "customerId": 61,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-09-02",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-062",
+        "customerId": 62,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-09-12",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-063",
+        "customerId": 63,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-09-22",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-064",
+        "customerId": 64,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-10-02",
+        "endDate": "2026-10-02"
+      },
+      {
+        "subscriptionId": "S-065",
+        "customerId": 65,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-10-12",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-066",
+        "customerId": 66,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-10-22",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-067",
+        "customerId": 67,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-11-01",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-068",
+        "customerId": 68,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-11-11",
+        "endDate": "2026-11-11"
+      },
+      {
+        "subscriptionId": "S-069",
+        "customerId": 69,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-11-21",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-070",
+        "customerId": 70,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2025-12-01",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-071",
+        "customerId": 71,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2025-12-11",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-072",
+        "customerId": 72,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2025-12-21",
+        "endDate": "2026-12-21"
+      },
+      {
+        "subscriptionId": "S-073",
+        "customerId": 73,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2025-12-31",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-074",
+        "customerId": 74,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-01-10",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-075",
+        "customerId": 75,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-01-20",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-076",
+        "customerId": 76,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-01-30",
+        "endDate": "2027-01-30"
+      },
+      {
+        "subscriptionId": "S-077",
+        "customerId": 77,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-02-09",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-078",
+        "customerId": 78,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-02-19",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-079",
+        "customerId": 79,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-03-01",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-080",
+        "customerId": 80,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-03-11",
+        "endDate": "2027-03-11"
+      },
+      {
+        "subscriptionId": "S-081",
+        "customerId": 81,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-03-21",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-082",
+        "customerId": 82,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-03-31",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-083",
+        "customerId": 83,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-04-10",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-084",
+        "customerId": 84,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-04-20",
+        "endDate": "2027-04-20"
+      },
+      {
+        "subscriptionId": "S-085",
+        "customerId": 85,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-04-30",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-086",
+        "customerId": 86,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-05-10",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-087",
+        "customerId": 87,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-05-20",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-088",
+        "customerId": 88,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-05-30",
+        "endDate": "2027-05-30"
+      },
+      {
+        "subscriptionId": "S-089",
+        "customerId": 89,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-06-09",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-090",
+        "customerId": 90,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-06-19",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-091",
+        "customerId": 91,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-06-29",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-092",
+        "customerId": 92,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-07-09",
+        "endDate": "2027-07-09"
+      },
+      {
+        "subscriptionId": "S-093",
+        "customerId": 93,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-07-19",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-094",
+        "customerId": 94,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-07-29",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-095",
+        "customerId": 95,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-08-08",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-096",
+        "customerId": 96,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-08-18",
+        "endDate": "2027-08-18"
+      },
+      {
+        "subscriptionId": "S-097",
+        "customerId": 97,
+        "planName": "Basic",
+        "mrr": 19,
+        "status": "active",
+        "startDate": "2026-08-28",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-098",
+        "customerId": 98,
+        "planName": "Gold",
+        "mrr": 49,
+        "status": "active",
+        "startDate": "2026-09-07",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-099",
+        "customerId": 99,
+        "planName": "Pro",
+        "mrr": 99,
+        "status": "paused",
+        "startDate": "2026-09-17",
+        "endDate": ""
+      },
+      {
+        "subscriptionId": "S-100",
+        "customerId": 100,
+        "planName": "Enterprise",
+        "mrr": 199,
+        "status": "cancelled",
+        "startDate": "2026-09-27",
+        "endDate": "2027-09-27"
+      }
+    ],
+    "SupportTicket_DMO": [
+      {
+        "ticketId": "T-9001",
+        "customerId": 1,
+        "openedDate": "2026-01-16",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9002",
+        "customerId": 2,
+        "openedDate": "2026-01-17",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9003",
+        "customerId": 3,
+        "openedDate": "2026-01-18",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9004",
+        "customerId": 4,
+        "openedDate": "2026-01-19",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9005",
+        "customerId": 5,
+        "openedDate": "2026-01-20",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9006",
+        "customerId": 6,
+        "openedDate": "2026-01-21",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9007",
+        "customerId": 7,
+        "openedDate": "2026-01-22",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9008",
+        "customerId": 8,
+        "openedDate": "2026-01-23",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9009",
+        "customerId": 9,
+        "openedDate": "2026-01-24",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9010",
+        "customerId": 10,
+        "openedDate": "2026-01-25",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9011",
+        "customerId": 11,
+        "openedDate": "2026-01-26",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9012",
+        "customerId": 12,
+        "openedDate": "2026-01-27",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9013",
+        "customerId": 13,
+        "openedDate": "2026-01-28",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9014",
+        "customerId": 14,
+        "openedDate": "2026-01-29",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9015",
+        "customerId": 15,
+        "openedDate": "2026-01-30",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9016",
+        "customerId": 16,
+        "openedDate": "2026-01-31",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9017",
+        "customerId": 17,
+        "openedDate": "2026-02-01",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9018",
+        "customerId": 18,
+        "openedDate": "2026-02-02",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9019",
+        "customerId": 19,
+        "openedDate": "2026-02-03",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9020",
+        "customerId": 20,
+        "openedDate": "2026-02-04",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9021",
+        "customerId": 21,
+        "openedDate": "2026-02-05",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9022",
+        "customerId": 22,
+        "openedDate": "2026-02-06",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9023",
+        "customerId": 23,
+        "openedDate": "2026-02-07",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9024",
+        "customerId": 24,
+        "openedDate": "2026-02-08",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9025",
+        "customerId": 25,
+        "openedDate": "2026-02-09",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9026",
+        "customerId": 26,
+        "openedDate": "2026-02-10",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9027",
+        "customerId": 27,
+        "openedDate": "2026-02-11",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9028",
+        "customerId": 28,
+        "openedDate": "2026-02-12",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9029",
+        "customerId": 29,
+        "openedDate": "2026-02-13",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9030",
+        "customerId": 30,
+        "openedDate": "2026-02-14",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9031",
+        "customerId": 31,
+        "openedDate": "2026-02-15",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9032",
+        "customerId": 32,
+        "openedDate": "2026-02-16",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9033",
+        "customerId": 33,
+        "openedDate": "2026-02-17",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9034",
+        "customerId": 34,
+        "openedDate": "2026-02-18",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9035",
+        "customerId": 35,
+        "openedDate": "2026-02-19",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9036",
+        "customerId": 36,
+        "openedDate": "2026-02-20",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9037",
+        "customerId": 37,
+        "openedDate": "2026-02-21",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9038",
+        "customerId": 38,
+        "openedDate": "2026-02-22",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9039",
+        "customerId": 39,
+        "openedDate": "2026-02-23",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9040",
+        "customerId": 40,
+        "openedDate": "2026-02-24",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9041",
+        "customerId": 41,
+        "openedDate": "2026-02-25",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9042",
+        "customerId": 42,
+        "openedDate": "2026-02-26",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9043",
+        "customerId": 43,
+        "openedDate": "2026-02-27",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9044",
+        "customerId": 44,
+        "openedDate": "2026-02-28",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9045",
+        "customerId": 45,
+        "openedDate": "2026-03-01",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9046",
+        "customerId": 46,
+        "openedDate": "2026-03-02",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9047",
+        "customerId": 47,
+        "openedDate": "2026-03-03",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9048",
+        "customerId": 48,
+        "openedDate": "2026-03-04",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9049",
+        "customerId": 49,
+        "openedDate": "2026-03-05",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9050",
+        "customerId": 50,
+        "openedDate": "2026-03-06",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9051",
+        "customerId": 51,
+        "openedDate": "2026-03-07",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9052",
+        "customerId": 52,
+        "openedDate": "2026-03-08",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9053",
+        "customerId": 53,
+        "openedDate": "2026-03-09",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9054",
+        "customerId": 54,
+        "openedDate": "2026-03-10",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9055",
+        "customerId": 55,
+        "openedDate": "2026-03-11",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9056",
+        "customerId": 56,
+        "openedDate": "2026-03-12",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9057",
+        "customerId": 57,
+        "openedDate": "2026-03-13",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9058",
+        "customerId": 58,
+        "openedDate": "2026-03-14",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9059",
+        "customerId": 59,
+        "openedDate": "2026-03-15",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9060",
+        "customerId": 60,
+        "openedDate": "2026-03-16",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9061",
+        "customerId": 61,
+        "openedDate": "2026-03-17",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9062",
+        "customerId": 62,
+        "openedDate": "2026-03-18",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9063",
+        "customerId": 63,
+        "openedDate": "2026-03-19",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9064",
+        "customerId": 64,
+        "openedDate": "2026-03-20",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9065",
+        "customerId": 65,
+        "openedDate": "2026-03-21",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9066",
+        "customerId": 66,
+        "openedDate": "2026-03-22",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9067",
+        "customerId": 67,
+        "openedDate": "2026-03-23",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9068",
+        "customerId": 68,
+        "openedDate": "2026-03-24",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9069",
+        "customerId": 69,
+        "openedDate": "2026-03-25",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9070",
+        "customerId": 70,
+        "openedDate": "2026-03-26",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9071",
+        "customerId": 71,
+        "openedDate": "2026-03-27",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9072",
+        "customerId": 72,
+        "openedDate": "2026-03-28",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9073",
+        "customerId": 73,
+        "openedDate": "2026-03-29",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9074",
+        "customerId": 74,
+        "openedDate": "2026-03-30",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9075",
+        "customerId": 75,
+        "openedDate": "2026-03-31",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9076",
+        "customerId": 76,
+        "openedDate": "2026-04-01",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9077",
+        "customerId": 77,
+        "openedDate": "2026-04-02",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9078",
+        "customerId": 78,
+        "openedDate": "2026-04-03",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9079",
+        "customerId": 79,
+        "openedDate": "2026-04-04",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9080",
+        "customerId": 80,
+        "openedDate": "2026-04-05",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9081",
+        "customerId": 81,
+        "openedDate": "2026-04-06",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9082",
+        "customerId": 82,
+        "openedDate": "2026-04-07",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9083",
+        "customerId": 83,
+        "openedDate": "2026-04-08",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9084",
+        "customerId": 84,
+        "openedDate": "2026-04-09",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9085",
+        "customerId": 85,
+        "openedDate": "2026-04-10",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9086",
+        "customerId": 86,
+        "openedDate": "2026-04-11",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9087",
+        "customerId": 87,
+        "openedDate": "2026-04-12",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9088",
+        "customerId": 88,
+        "openedDate": "2026-04-13",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9089",
+        "customerId": 89,
+        "openedDate": "2026-04-14",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9090",
+        "customerId": 90,
+        "openedDate": "2026-04-15",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9091",
+        "customerId": 91,
+        "openedDate": "2026-04-16",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9092",
+        "customerId": 92,
+        "openedDate": "2026-04-17",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9093",
+        "customerId": 93,
+        "openedDate": "2026-04-18",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9094",
+        "customerId": 94,
+        "openedDate": "2026-04-19",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9095",
+        "customerId": 95,
+        "openedDate": "2026-04-20",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "account_access"
+      },
+      {
+        "ticketId": "T-9096",
+        "customerId": 96,
+        "openedDate": "2026-04-21",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "payment"
+      },
+      {
+        "ticketId": "T-9097",
+        "customerId": 97,
+        "openedDate": "2026-04-22",
+        "priority": "low",
+        "resolutionHours": 24,
+        "issueCategory": "delivery"
+      },
+      {
+        "ticketId": "T-9098",
+        "customerId": 98,
+        "openedDate": "2026-04-23",
+        "priority": "medium",
+        "resolutionHours": 12,
+        "issueCategory": "returns"
+      },
+      {
+        "ticketId": "T-9099",
+        "customerId": 99,
+        "openedDate": "2026-04-24",
+        "priority": "high",
+        "resolutionHours": 6,
+        "issueCategory": "product_question"
+      },
+      {
+        "ticketId": "T-9100",
+        "customerId": 100,
+        "openedDate": "2026-04-25",
+        "priority": "critical",
+        "resolutionHours": 2,
+        "issueCategory": "account_access"
+      }
+    ],
+    "CustomerSnapshot_DMO": [
+      {
+        "customerId": 1,
+        "lifetimeNetRevenue": 62.5,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 2,
+        "lifetimeNetRevenue": 75,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 3,
+        "lifetimeNetRevenue": 78.75,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 4,
+        "lifetimeNetRevenue": 100,
+        "totalRefunds": 20,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 5,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 6,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 7,
+        "lifetimeNetRevenue": 137.5,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 8,
+        "lifetimeNetRevenue": 150,
+        "totalRefunds": 35,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 9,
+        "lifetimeNetRevenue": 146.25,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 10,
+        "lifetimeNetRevenue": 175,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 11,
+        "lifetimeNetRevenue": 187.5,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 12,
+        "lifetimeNetRevenue": 180,
+        "totalRefunds": 50,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 13,
+        "lifetimeNetRevenue": 212.5,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 14,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 15,
+        "lifetimeNetRevenue": 213.75,
+        "totalRefunds": 5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 16,
+        "lifetimeNetRevenue": 250,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 17,
+        "lifetimeNetRevenue": 262.5,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 18,
+        "lifetimeNetRevenue": 247.5,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 19,
+        "lifetimeNetRevenue": 287.5,
+        "totalRefunds": 20,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 20,
+        "lifetimeNetRevenue": 50,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 21,
+        "lifetimeNetRevenue": 56.25,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 22,
+        "lifetimeNetRevenue": 75,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 23,
+        "lifetimeNetRevenue": 87.5,
+        "totalRefunds": 35,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 24,
+        "lifetimeNetRevenue": 90,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 25,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 26,
+        "lifetimeNetRevenue": 125,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 27,
+        "lifetimeNetRevenue": 123.75,
+        "totalRefunds": 50,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 28,
+        "lifetimeNetRevenue": 150,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 29,
+        "lifetimeNetRevenue": 162.5,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 30,
+        "lifetimeNetRevenue": 157.5,
+        "totalRefunds": 5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 31,
+        "lifetimeNetRevenue": 187.5,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 32,
+        "lifetimeNetRevenue": 200,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 33,
+        "lifetimeNetRevenue": 191.25,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 34,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 20,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 35,
+        "lifetimeNetRevenue": 237.5,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 36,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 37,
+        "lifetimeNetRevenue": 262.5,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 38,
+        "lifetimeNetRevenue": 275,
+        "totalRefunds": 35,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 39,
+        "lifetimeNetRevenue": 258.75,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 40,
+        "lifetimeNetRevenue": 50,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 41,
+        "lifetimeNetRevenue": 62.5,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 42,
+        "lifetimeNetRevenue": 67.5,
+        "totalRefunds": 50,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 43,
+        "lifetimeNetRevenue": 87.5,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 44,
+        "lifetimeNetRevenue": 100,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 45,
+        "lifetimeNetRevenue": 101.25,
+        "totalRefunds": 5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 46,
+        "lifetimeNetRevenue": 125,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 47,
+        "lifetimeNetRevenue": 137.5,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 48,
+        "lifetimeNetRevenue": 135,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 49,
+        "lifetimeNetRevenue": 162.5,
+        "totalRefunds": 20,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 50,
+        "lifetimeNetRevenue": 175,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 51,
+        "lifetimeNetRevenue": 168.75,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 52,
+        "lifetimeNetRevenue": 200,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 53,
+        "lifetimeNetRevenue": 212.5,
+        "totalRefunds": 35,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 54,
+        "lifetimeNetRevenue": 202.5,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 55,
+        "lifetimeNetRevenue": 237.5,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 56,
+        "lifetimeNetRevenue": 250,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 57,
+        "lifetimeNetRevenue": 236.25,
+        "totalRefunds": 50,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 58,
+        "lifetimeNetRevenue": 275,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 59,
+        "lifetimeNetRevenue": 287.5,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 60,
+        "lifetimeNetRevenue": 45,
+        "totalRefunds": 5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 61,
+        "lifetimeNetRevenue": 62.5,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 62,
+        "lifetimeNetRevenue": 75,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 63,
+        "lifetimeNetRevenue": 78.75,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 64,
+        "lifetimeNetRevenue": 100,
+        "totalRefunds": 20,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 65,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 66,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 67,
+        "lifetimeNetRevenue": 137.5,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 68,
+        "lifetimeNetRevenue": 150,
+        "totalRefunds": 35,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 69,
+        "lifetimeNetRevenue": 146.25,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 70,
+        "lifetimeNetRevenue": 175,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 71,
+        "lifetimeNetRevenue": 187.5,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 72,
+        "lifetimeNetRevenue": 180,
+        "totalRefunds": 50,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 73,
+        "lifetimeNetRevenue": 212.5,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 74,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 75,
+        "lifetimeNetRevenue": 213.75,
+        "totalRefunds": 5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 76,
+        "lifetimeNetRevenue": 250,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 77,
+        "lifetimeNetRevenue": 262.5,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 78,
+        "lifetimeNetRevenue": 247.5,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 79,
+        "lifetimeNetRevenue": 287.5,
+        "totalRefunds": 20,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 80,
+        "lifetimeNetRevenue": 50,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 81,
+        "lifetimeNetRevenue": 56.25,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 82,
+        "lifetimeNetRevenue": 75,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 83,
+        "lifetimeNetRevenue": 87.5,
+        "totalRefunds": 35,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 84,
+        "lifetimeNetRevenue": 90,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 85,
+        "lifetimeNetRevenue": 112.5,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 86,
+        "lifetimeNetRevenue": 125,
+        "totalRefunds": 46.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 87,
+        "lifetimeNetRevenue": 123.75,
+        "totalRefunds": 50,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 88,
+        "lifetimeNetRevenue": 150,
+        "totalRefunds": 53.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 89,
+        "lifetimeNetRevenue": 162.5,
+        "totalRefunds": 57.5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 90,
+        "lifetimeNetRevenue": 157.5,
+        "totalRefunds": 5,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 91,
+        "lifetimeNetRevenue": 187.5,
+        "totalRefunds": 8.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 92,
+        "lifetimeNetRevenue": 200,
+        "totalRefunds": 12.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 93,
+        "lifetimeNetRevenue": 191.25,
+        "totalRefunds": 16.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 94,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 20,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 95,
+        "lifetimeNetRevenue": 237.5,
+        "totalRefunds": 23.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 96,
+        "lifetimeNetRevenue": 225,
+        "totalRefunds": 27.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 97,
+        "lifetimeNetRevenue": 262.5,
+        "totalRefunds": 31.25,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 98,
+        "lifetimeNetRevenue": 275,
+        "totalRefunds": 35,
+        "activeSubscriptions": 1,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 99,
+        "lifetimeNetRevenue": 258.75,
+        "totalRefunds": 38.75,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      },
+      {
+        "customerId": 100,
+        "lifetimeNetRevenue": 50,
+        "totalRefunds": 42.5,
+        "activeSubscriptions": 0,
+        "ticketCount": 1
+      }
+    ]
+  },
+  "metadata": {
+    "generatedAt": "2026-03-27T15:41:45.969Z",
+    "unresolvedLinks": {
+      "ordersMissingCustomer": 0,
+      "returnsMissingOrder": 0,
+      "returnsCustomerMismatch": 0,
+      "subscriptionsMissingCustomer": 0,
+      "ticketsMissingCustomer": 0
+    }
+  }
+}

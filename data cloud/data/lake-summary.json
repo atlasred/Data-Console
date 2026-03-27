@@ -1,0 +1,102 @@
+{
+  "processedCsvFiles": [
+    "customer_profiles.csv",
+    "customer_orders.csv",
+    "customer_returns.csv",
+    "customer_subscriptions.csv",
+    "customer_support_tickets.csv"
+  ],
+  "streamDefinitions": [
+    {
+      "streamName": "customer_profiles_stream",
+      "fileName": "customer_profiles.csv",
+      "dloName": "CustomerProfile_DLO",
+      "primaryKey": "id"
+    },
+    {
+      "streamName": "customer_orders_stream",
+      "fileName": "customer_orders.csv",
+      "dloName": "CustomerOrder_DLO",
+      "primaryKey": "orderId"
+    },
+    {
+      "streamName": "customer_returns_stream",
+      "fileName": "customer_returns.csv",
+      "dloName": "CustomerReturn_DLO",
+      "primaryKey": "returnId"
+    },
+    {
+      "streamName": "customer_subscriptions_stream",
+      "fileName": "customer_subscriptions.csv",
+      "dloName": "CustomerSubscription_DLO",
+      "primaryKey": "subscriptionId"
+    },
+    {
+      "streamName": "customer_support_tickets_stream",
+      "fileName": "customer_support_tickets.csv",
+      "dloName": "CustomerSupportTicket_DLO",
+      "primaryKey": "ticketId"
+    }
+  ],
+  "entityCounts": {
+    "CustomerProfile_DLO": 100,
+    "CustomerOrder_DLO": 100,
+    "CustomerReturn_DLO": 100,
+    "CustomerSubscription_DLO": 100,
+    "CustomerSupportTicket_DLO": 100
+  },
+  "metadata": {
+    "lastUpdatedAt": "2026-03-27T15:41:45.964Z",
+    "ingestedFiles": [
+      {
+        "fileName": "customer_profiles.csv",
+        "streamName": "customer_profiles_stream",
+        "entityName": "CustomerProfile_DLO",
+        "ingestedAt": "2026-03-27T15:41:45.957Z"
+      },
+      {
+        "fileName": "customer_orders.csv",
+        "streamName": "customer_orders_stream",
+        "entityName": "CustomerOrder_DLO",
+        "ingestedAt": "2026-03-27T15:41:45.960Z"
+      },
+      {
+        "fileName": "customer_returns.csv",
+        "streamName": "customer_returns_stream",
+        "entityName": "CustomerReturn_DLO",
+        "ingestedAt": "2026-03-27T15:41:45.961Z"
+      },
+      {
+        "fileName": "customer_subscriptions.csv",
+        "streamName": "customer_subscriptions_stream",
+        "entityName": "CustomerSubscription_DLO",
+        "ingestedAt": "2026-03-27T15:41:45.963Z"
+      },
+      {
+        "fileName": "customer_support_tickets.csv",
+        "streamName": "customer_support_tickets_stream",
+        "entityName": "CustomerSupportTicket_DLO",
+        "ingestedAt": "2026-03-27T15:41:45.964Z"
+      }
+    ]
+  },
+  "modelObjectCounts": {
+    "Customer_DMO": 100,
+    "Order_DMO": 100,
+    "Return_DMO": 100,
+    "Subscription_DMO": 100,
+    "SupportTicket_DMO": 100,
+    "CustomerSnapshot_DMO": 100
+  },
+  "modelMetadata": {
+    "generatedAt": "2026-03-27T15:41:45.969Z",
+    "unresolvedLinks": {
+      "ordersMissingCustomer": 0,
+      "returnsMissingOrder": 0,
+      "returnsCustomerMismatch": 0,
+      "subscriptionsMissingCustomer": 0,
+      "ticketsMissingCustomer": 0
+    }
+  },
+  "dmoAnalyticsGeneratedAt": "2026-03-27T15:42:08.488Z"
+}

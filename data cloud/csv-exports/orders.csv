@@ -1,0 +1,4 @@
+id,customerId,status,total
+1001,1,completed,59.00
+1002,2,processing,129.50
+1003,3,completed,340.25

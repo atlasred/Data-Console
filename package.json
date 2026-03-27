@@ -1,0 +1,10 @@
+{
+  "name": "data-console-host",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static host server for Data Console dashboard pages.",
+  "type": "commonjs",
+  "scripts": {
+    "serve": "node server.js"
+  }
+}

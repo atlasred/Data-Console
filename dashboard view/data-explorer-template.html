@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Explorer Template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: Inter, system-ui, sans-serif;
+        background: #020617;
+        color: #e2e8f0;
+      }
+      .panel {
+        max-width: 1080px;
+        margin: 0 auto;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 1rem;
+        background: #0f172a;
+      }
+      .filters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.75rem;
+      }
+      label { font-size: 0.85rem; color: #94a3b8; display: block; margin-bottom: 0.3rem; }
+      input, select {
+        width: 100%;
+        border: 1px solid #475569;
+        border-radius: 8px;
+        padding: 0.5rem;
+        background: #111827;
+        color: #f8fafc;
+      }
+      table {
+        margin-top: 1rem;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 0.7rem;
+        border-bottom: 1px solid #334155;
+        text-align: left;
+      }
+      th { color: #38bdf8; }
+      .query {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        background: #111827;
+        color: #a5b4fc;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>Data Explorer Template</h1>
+      <p>Template for exploring customer revenue relationships across the five customer CSV sources.</p>
+
+      <div class="filters">
+        <div>
+          <label for="entity">Entity</label>
+          <select id="entity">
+            <option>customer_profiles</option>
+            <option>customer_orders</option>
+            <option>customer_subscriptions</option>
+            <option>customer_returns</option>
+            <option>customer_support_tickets</option>
+          </select>
+        </div>
+        <div>
+          <label for="segment">Segment</label>
+          <input id="segment" placeholder="vip / loyal / new" />
+        </div>
+        <div>
+          <label for="dateRange">Date Range</label>
+          <input id="dateRange" placeholder="2026-01-01 to 2026-03-31" />
+        </div>
+        <div>
+          <label for="metric">Metric</label>
+          <select id="metric">
+            <option>netRevenue</option>
+            <option>grossRevenue</option>
+            <option>refundAmount</option>
+            <option>mrr</option>
+            <option>resolutionHours</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="query">
+        SELECT customerId, SUM(netRevenue) - SUM(refundAmount) AS realizedRevenue<br/>
+        FROM customer_orders LEFT JOIN customer_returns USING (customerId)<br/>
+        GROUP BY customerId;
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>customerId</th>
+            <th>segment</th>
+            <th>orders</th>
+            <th>refunds</th>
+            <th>realizedRevenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>loyal</td>
+            <td>2</td>
+            <td>1</td>
+            <td>310.00</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>vip</td>
+            <td>1</td>
+            <td>1</td>
+            <td>280.25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
