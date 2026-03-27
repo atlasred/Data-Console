@@ -192,7 +192,7 @@ export function pipelinePlugin(root) {
       const li = document.createElement('li');
       const text = typeof item === 'object' ? JSON.stringify(item) : String(item);
       li.className = 'alert-item';
-      li.textContent = `Alert: ${text}`;
+      li.textContent = text;
       aiAlerts.append(li);
     });
 
@@ -201,7 +201,7 @@ export function pipelinePlugin(root) {
       const li = document.createElement('li');
       const text = typeof item === 'object' ? JSON.stringify(item) : String(item);
       li.className = 'action-item';
-      li.textContent = `Action: ${text}`;
+      li.textContent = text;
       aiActions.append(li);
     });
   }

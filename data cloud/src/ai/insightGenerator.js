@@ -39,6 +39,13 @@ function toInsightText(value) {
         .join(', ');
     }
 
+    for (const preferredKey of ['message', 'text', 'action', 'description', 'summary']) {
+      const preferredValue = toInsightText(value[preferredKey]).trim();
+      if (preferredValue) {
+        return preferredValue;
+      }
+    }
+
     const entries = Object.entries(value)
       .filter(([, entryValue]) => entryValue !== null && entryValue !== undefined)
       .map(([key, entryValue]) => {
@@ -49,7 +56,7 @@ function toInsightText(value) {
           return '';
         }
 
-        if (key === 'text' || key === 'action') {
+        if (key === 'title') {
           return formattedValue;
         }
 
