@@ -44,7 +44,16 @@ function toInsightText(value) {
       .map(([key, entryValue]) => {
         const formattedValue =
           typeof entryValue === 'object' ? toInsightText(entryValue) : String(entryValue).trim();
-        return formattedValue ? `${key}: ${formattedValue}` : '';
+
+        if (!formattedValue) {
+          return '';
+        }
+
+        if (key === 'text' || key === 'action') {
+          return formattedValue;
+        }
+
+        return `${key}: ${formattedValue}`;
       })
       .filter(Boolean);
 
@@ -96,8 +105,8 @@ function normalizeChartCaptions(value = {}) {
 
 function normalizeManagerInsights(payload = {}) {
   return {
-    headline: String(payload.headline ?? '').trim(),
-    summary: String(payload.summary ?? '').trim(),
+    headline: toInsightText(payload.headline).trim(),
+    summary: toInsightText(payload.summary).trim(),
     alerts: normalizeStringArray(payload.alerts),
     recommendedActions: normalizeStringArray(payload.recommendedActions),
     chartCaptions: normalizeChartCaptions(payload.chartCaptions)
