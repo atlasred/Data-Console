@@ -192,7 +192,7 @@ export function pipelinePlugin(root) {
       const li = document.createElement('li');
       const text = typeof item === 'object' ? JSON.stringify(item) : String(item);
       li.className = 'alert-item';
-      li.textContent = `Alert: ${text}`;
+      li.textContent = text;
       aiAlerts.append(li);
     });
 
@@ -201,7 +201,7 @@ export function pipelinePlugin(root) {
       const li = document.createElement('li');
       const text = typeof item === 'object' ? JSON.stringify(item) : String(item);
       li.className = 'action-item';
-      li.textContent = `Action: ${text}`;
+      li.textContent = text;
       aiActions.append(li);
     });
   }
@@ -219,6 +219,7 @@ export function pipelinePlugin(root) {
   }
 
   function resetMetrics() {
+    processPanel.hidden = false;
     csvValueNode.textContent = '0';
     objectValueNode.textContent = '0';
     healthValueNode.textContent = 'READY';
@@ -230,6 +231,7 @@ export function pipelinePlugin(root) {
   }
 
   async function runIngest() {
+    processPanel.hidden = false;
     runButton.disabled = true;
     runButton.textContent = 'Running...';
     healthValueNode.textContent = 'RUNNING';
@@ -257,6 +259,7 @@ export function pipelinePlugin(root) {
       validationGauge.setValue(rates.validationRate);
       writeGauge.setValue(rates.writeRate);
 
+      processPanel.hidden = true;
       renderAnalyticsCharts(analytics);
       setPipelineState('is-finished');
     } catch (error) {

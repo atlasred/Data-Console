@@ -32,6 +32,42 @@ function toInsightText(value) {
   }
 
   if (typeof value === 'object') {
+    if (Array.isArray(value)) {
+      return value
+        .map((item) => toInsightText(item).trim())
+        .filter(Boolean)
+        .join(', ');
+    }
+
+    for (const preferredKey of ['message', 'text', 'action', 'description', 'summary']) {
+      const preferredValue = toInsightText(value[preferredKey]).trim();
+      if (preferredValue) {
+        return preferredValue;
+      }
+    }
+
+    const entries = Object.entries(value)
+      .filter(([, entryValue]) => entryValue !== null && entryValue !== undefined)
+      .map(([key, entryValue]) => {
+        const formattedValue =
+          typeof entryValue === 'object' ? toInsightText(entryValue) : String(entryValue).trim();
+
+        if (!formattedValue) {
+          return '';
+        }
+
+        if (key === 'title') {
+          return formattedValue;
+        }
+
+        return `${key}: ${formattedValue}`;
+      })
+      .filter(Boolean);
+
+    if (entries.length) {
+      return entries.join(', ');
+    }
+
     try {
       return JSON.stringify(value);
     } catch {
@@ -76,8 +112,8 @@ function normalizeChartCaptions(value = {}) {
 
 function normalizeManagerInsights(payload = {}) {
   return {
-    headline: String(payload.headline ?? '').trim(),
-    summary: String(payload.summary ?? '').trim(),
+    headline: toInsightText(payload.headline).trim(),
+    summary: toInsightText(payload.summary).trim(),
     alerts: normalizeStringArray(payload.alerts),
     recommendedActions: normalizeStringArray(payload.recommendedActions),
     chartCaptions: normalizeChartCaptions(payload.chartCaptions)
