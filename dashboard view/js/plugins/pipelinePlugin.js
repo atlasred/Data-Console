@@ -80,13 +80,13 @@ export function pipelinePlugin(root) {
   chartsPanel.innerHTML = `<div class="title">Customers Analysis</div><div class="charts-grid"></div>`;
   const chartsGrid = chartsPanel.querySelector('.charts-grid');
 
-  const netRevenueCard = chartCard('Net Revenue by Segment', 'Bar');
-  const refundCard = chartCard('Refund by Segment', 'Bar');
-  const refundsOverTimeCard = chartCard('Refunds Over Time', 'Line');
-  const customerMixCard = chartCard('Customer Mix by Segment', 'Donut');
-  const heatmapCard = chartCard('Segment × Metric', 'Heatmap');
+  const purchasesCard = chartCard('Purchases by Customer', 'Bar');
+  const conversionCard = chartCard('Conversion vs Abandonment', 'Bar');
+  const funnelCard = chartCard('Funnel Stage Totals', 'Line');
+  const engagementCard = chartCard('Engagement Score by Customer', 'Donut');
+  const heatmapCard = chartCard('Customer × Rate', 'Heatmap');
 
-  chartsGrid.append(customerMixCard, netRevenueCard, refundCard, refundsOverTimeCard, heatmapCard);
+  chartsGrid.append(engagementCard, purchasesCard, conversionCard, funnelCard, heatmapCard);
 
   const aiPanel = document.createElement('article');
   aiPanel.className = 'panel compact';
@@ -123,11 +123,7 @@ export function pipelinePlugin(root) {
   const aiActions = aiPanel.querySelector('#aiActions');
   const fileProcessingList = processPanel.querySelector('#fileProcessingList');
   const csvFiles = [
-    'customer_profiles.csv',
-    'customer_orders.csv',
-    'customer_returns.csv',
-    'customer_subscriptions.csv',
-    'customer_support_tickets.csv'
+    'customers*.csv'
   ];
 
   function renderFileProcessingItems() {
@@ -209,10 +205,24 @@ export function pipelinePlugin(root) {
   function renderAnalyticsCharts(analytics) {
     const charts = analytics?.charts || {};
 
-    renderBarChart(netRevenueCard.querySelector('.chart-body'), (charts.netRevenueBySegment || []).map((item) => ({ label: item.segment, value: item.value })), { decimals: 1 });
-    renderBarChart(refundCard.querySelector('.chart-body'), (charts.refundBySegment || []).map((item) => ({ label: item.segment, value: item.refundAmount })), { decimals: 1 });
-    renderLineChart(refundsOverTimeCard.querySelector('.chart-body'), (charts.refundsOverTime || []).map((item) => ({ label: item.month, value: item.refundAmount })));
-    renderDonutChart(customerMixCard.querySelector('.chart-body'), (charts.customerMixBySegment || []).map((item) => ({ label: item.segment, value: item.customers })));
+    renderBarChart(
+      purchasesCard.querySelector('.chart-body'),
+      (charts.purchasesByCustomer || []).map((item) => ({ label: item.customer, value: item.value })),
+      { decimals: 1 }
+    );
+    renderBarChart(
+      conversionCard.querySelector('.chart-body'),
+      (charts.conversionByCustomer || []).map((item) => ({ label: item.customer, value: item.conversionRate })),
+      { decimals: 1, unit: '%' }
+    );
+    renderLineChart(
+      funnelCard.querySelector('.chart-body'),
+      (charts.funnelStageTotals || []).map((item) => ({ label: item.step, value: item.value }))
+    );
+    renderDonutChart(
+      engagementCard.querySelector('.chart-body'),
+      (charts.engagementByCustomer || []).map((item) => ({ label: item.customer, value: item.engagementScore }))
+    );
     renderHeatmap(heatmapCard.querySelector('.chart-body'), charts.heatmap || []);
 
     renderAiSummary(analytics.managerInsights || {});

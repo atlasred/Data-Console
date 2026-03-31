@@ -3,22 +3,14 @@
 This folder contains a standalone stream-ingestion layer, raw Data Lake Objects (DLOs), and runtime-generated Data Model Objects (DMOs).
 
 ## Data Streams (CSV -> Stream)
-- `customer_profiles_stream` -> `customer_profiles.csv`
-- `customer_orders_stream` -> `customer_orders.csv`
-- `customer_returns_stream` -> `customer_returns.csv`
-- `customer_subscriptions_stream` -> `customer_subscriptions.csv`
-- `customer_support_tickets_stream` -> `customer_support_tickets.csv`
+- `customer_engagement_stream` -> `customers*.csv` (supports both tabular customer metrics headers and `metric,value` admin exports)
 
 ## Raw DLO outputs
-- `CustomerProfile_DLO`
-- `CustomerOrder_DLO`
-- `CustomerReturn_DLO`
-- `CustomerSubscription_DLO`
-- `CustomerSupportTicket_DLO`
+- `CustomerEngagement_DLO`
 
 ## What the pipeline does
 - Reads CSV files from `csv-exports/`.
-- Validates file schema (CSV headers) against expected stream schema.
+- Validates file schema (CSV headers) against expected stream schema or accepted admin metric/value format.
 - Validates row-level governance rules from `src/dataGovernance.js`.
 - Upserts rows into DLO collections through `src/dataObjectsLake.js`.
 - Writes runtime-generated artifacts:

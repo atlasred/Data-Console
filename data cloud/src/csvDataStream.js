@@ -39,16 +39,57 @@ function inferEntityName(filePath) {
   return path.basename(filePath, path.extname(filePath)).toLowerCase();
 }
 
-function isHeaderSchemaValid(actualHeaders, expectedHeaders = []) {
+function normalizeHeaderName(value) {
+  return String(value || '').trim().toLowerCase();
+}
+
+function normalizeRecordValue(raw) {
+  if (raw == null) {
+    return '';
+  }
+
+  const trimmed = String(raw).trim();
+  if (trimmed === '') {
+    return '';
+  }
+
+  const asNumber = Number(trimmed);
+  return Number.isNaN(asNumber) ? trimmed : asNumber;
+}
+
+function remapHeaders(headers, headerMap = {}) {
+  return headers.map((header) => headerMap[header] || header);
+}
+
+function isHeaderSchemaValid(actualHeaders, expectedHeaders = [], acceptedHeaderSets = []) {
+  const normalizedActual = actualHeaders.map(normalizeHeaderName);
+  const expectedSets = [];
+
   if (!expectedHeaders.length) {
+    expectedSets.push([]);
+  } else {
+    expectedSets.push(expectedHeaders);
+  }
+
+  if (Array.isArray(acceptedHeaderSets)) {
+    acceptedHeaderSets.forEach((headerSet) => {
+      if (Array.isArray(headerSet) && headerSet.length > 0) {
+        expectedSets.push(headerSet);
+      }
+    });
+  }
+
+  if (!expectedSets.length || (expectedSets.length === 1 && expectedSets[0].length === 0)) {
     return true;
   }
 
-  if (actualHeaders.length !== expectedHeaders.length) {
-    return false;
-  }
+  return expectedSets.some((expectedSet) => {
+    if (normalizedActual.length !== expectedSet.length) {
+      return false;
+    }
 
-  return expectedHeaders.every((header, index) => header === actualHeaders[index]);
+    return expectedSet.every((header, index) => normalizeHeaderName(header) === normalizedActual[index]);
+  });
 }
 
 async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
@@ -58,8 +99,16 @@ async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
   const entityName = streamConfig.dloName || streamConfig.entityName || inferEntityName(filePath);
   const primaryKey = streamConfig.primaryKey;
   const expectedHeaders = streamConfig.expectedHeaders || [];
+  const acceptedHeaderSets = streamConfig.acceptedHeaderSets || [];
+  const headerMap = streamConfig.headerMap || {};
   const streamName = streamConfig.streamName || `${entityName}_stream`;
+  const format = streamConfig.format || 'table';
+  const metricColumn = streamConfig.metricColumn || 'metric';
+  const valueColumn = streamConfig.valueColumn || 'value';
+  const metricMap = streamConfig.metricMap || {};
   let headers = null;
+  let effectiveFormat = format;
+  const keyValueRecord = {};
 
   for await (const line of lineReader) {
     if (!line.trim()) {
@@ -67,8 +116,13 @@ async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
     }
 
     if (!headers) {
-      headers = parseCsvLine(line);
-      if (!isHeaderSchemaValid(headers, expectedHeaders)) {
+      const parsedHeaders = parseCsvLine(line);
+      headers = remapHeaders(parsedHeaders, headerMap);
+      const hasMetricValueHeaders =
+        headers.includes(metricColumn) && headers.includes(valueColumn);
+      effectiveFormat = format === 'auto' ? (hasMetricValueHeaders ? 'metricValue' : 'table') : format;
+
+      if (!isHeaderSchemaValid(headers, expectedHeaders, acceptedHeaderSets)) {
         throw new Error(
           `${streamName} header mismatch. Expected [${expectedHeaders.join(', ')}] but found [${headers.join(', ')}]`
         );
@@ -77,10 +131,22 @@ async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
     }
 
     const values = parseCsvLine(line);
+
+    if (effectiveFormat === 'metricValue') {
+      const metricIndex = headers.indexOf(metricColumn);
+      const valueIndex = headers.indexOf(valueColumn);
+      const metricName = values[metricIndex];
+      if (!metricName) {
+        continue;
+      }
+
+      const normalizedMetricName = metricMap[metricName] || metricName;
+      keyValueRecord[normalizedMetricName] = normalizeRecordValue(values[valueIndex]);
+      continue;
+    }
+
     const record = headers.reduce((acc, header, index) => {
-      const raw = values[index] ?? '';
-      const asNumber = Number(raw);
-      acc[header] = Number.isNaN(asNumber) || raw === '' ? raw : asNumber;
+      acc[header] = normalizeRecordValue(values[index] ?? '');
       return acc;
     }, {});
 
@@ -91,6 +157,15 @@ async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
     }
 
     dataLake.upsert(entityName, record, { primaryKey });
+  }
+
+  if (effectiveFormat === 'metricValue' && Object.keys(keyValueRecord).length > 0) {
+    const validation = validateRecord(entityName, keyValueRecord);
+    if (!validation.valid) {
+      console.warn(`Skipped invalid record in ${entityName}: ${validation.errors.join('; ')}`);
+    } else {
+      dataLake.upsert(entityName, keyValueRecord, { primaryKey });
+    }
   }
 
   dataLake.markIngestion(path.basename(filePath), streamName, entityName);
@@ -114,16 +189,37 @@ async function ingestAllCsv(csvFolderPath, dataLake, streamDefinitions = []) {
 
   const processed = [];
   for (const streamConfig of streamDefinitions) {
-    const fileName = streamConfig.fileName;
-    const fullPath = path.join(csvFolderPath, fileName);
+    const matchedFileNames = [];
 
-    if (!fs.existsSync(fullPath)) {
-      console.warn(`Configured stream file is missing: ${fileName}`);
+    if (streamConfig.filePattern) {
+      const matcher = streamConfig.filePattern instanceof RegExp
+        ? streamConfig.filePattern
+        : new RegExp(String(streamConfig.filePattern), 'i');
+      discoveredFileNames.forEach((name) => {
+        if (matcher.test(name)) {
+          matchedFileNames.push(name);
+        }
+      });
+    } else if (streamConfig.fileName) {
+      matchedFileNames.push(streamConfig.fileName);
+    }
+
+    if (!matchedFileNames.length) {
+      const label = streamConfig.fileName || String(streamConfig.filePattern || streamConfig.streamName || 'unknown');
+      console.warn(`Configured stream file is missing: ${label}`);
       continue;
     }
 
-    await streamCsvIntoLake(fullPath, dataLake, streamConfig);
-    processed.push(fileName);
+    for (const fileName of matchedFileNames) {
+      const fullPath = path.join(csvFolderPath, fileName);
+      if (!fs.existsSync(fullPath)) {
+        console.warn(`Configured stream file is missing: ${fileName}`);
+        continue;
+      }
+
+      await streamCsvIntoLake(fullPath, dataLake, streamConfig);
+      processed.push(fileName);
+    }
   }
 
   return processed;
