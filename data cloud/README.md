@@ -4,6 +4,7 @@ This folder contains a standalone stream-ingestion layer, raw Data Lake Objects 
 
 ## Data Streams (CSV -> Stream)
 - `customer_profiles_stream` -> `customer_profiles.csv`
+- `customers_stream` -> `customers.csv` (supports both tabular headers and `metric,value` admin exports)
 - `customer_orders_stream` -> `customer_orders.csv`
 - `customer_returns_stream` -> `customer_returns.csv`
 - `customer_subscriptions_stream` -> `customer_subscriptions.csv`
@@ -11,6 +12,7 @@ This folder contains a standalone stream-ingestion layer, raw Data Lake Objects 
 
 ## Raw DLO outputs
 - `CustomerProfile_DLO`
+- `Customer_DLO`
 - `CustomerOrder_DLO`
 - `CustomerReturn_DLO`
 - `CustomerSubscription_DLO`
