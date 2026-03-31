@@ -189,16 +189,37 @@ async function ingestAllCsv(csvFolderPath, dataLake, streamDefinitions = []) {
 
   const processed = [];
   for (const streamConfig of streamDefinitions) {
-    const fileName = streamConfig.fileName;
-    const fullPath = path.join(csvFolderPath, fileName);
+    const matchedFileNames = [];
 
-    if (!fs.existsSync(fullPath)) {
-      console.warn(`Configured stream file is missing: ${fileName}`);
+    if (streamConfig.filePattern) {
+      const matcher = streamConfig.filePattern instanceof RegExp
+        ? streamConfig.filePattern
+        : new RegExp(String(streamConfig.filePattern), 'i');
+      discoveredFileNames.forEach((name) => {
+        if (matcher.test(name)) {
+          matchedFileNames.push(name);
+        }
+      });
+    } else if (streamConfig.fileName) {
+      matchedFileNames.push(streamConfig.fileName);
+    }
+
+    if (!matchedFileNames.length) {
+      const label = streamConfig.fileName || String(streamConfig.filePattern || streamConfig.streamName || 'unknown');
+      console.warn(`Configured stream file is missing: ${label}`);
       continue;
     }
 
-    await streamCsvIntoLake(fullPath, dataLake, streamConfig);
-    processed.push(fileName);
+    for (const fileName of matchedFileNames) {
+      const fullPath = path.join(csvFolderPath, fileName);
+      if (!fs.existsSync(fullPath)) {
+        console.warn(`Configured stream file is missing: ${fileName}`);
+        continue;
+      }
+
+      await streamCsvIntoLake(fullPath, dataLake, streamConfig);
+      processed.push(fileName);
+    }
   }
 
   return processed;

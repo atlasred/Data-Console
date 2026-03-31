@@ -1,119 +1,92 @@
-import { getNetRevenue, getRefundRate, isActiveSubscription, getAverageResolutionHours } from './metrics.js';
-import { groupBySegment, groupByMonth } from './dimensions.js';
-import { isAtRiskSegment, isHealthySegment, hasHighRefundPressure } from './rules.js';
+import {
+  getConversionRate,
+  getCartAbandonmentRate,
+  getLoginStickiness,
+  getEngagementScore
+} from './metrics.js';
+import { isAtRiskCustomer, isHealthyCustomer, hasHighAbandonmentPressure } from './rules.js';
 
-/**
- * Build business semantic summaries from parsed DMO entities.
- * Pure function: consumes object, returns object.
- */
+function sum(records = [], field) {
+  return records.reduce((total, record) => total + Number(record[field] || 0), 0);
+}
+
 export function buildSemanticView(entities = {}) {
-  const customers = Array.isArray(entities.Customer_DMO) ? entities.Customer_DMO : [];
-  const orders = Array.isArray(entities.Order_DMO) ? entities.Order_DMO : [];
-  const returns = Array.isArray(entities.Return_DMO) ? entities.Return_DMO : [];
-  const subscriptions = Array.isArray(entities.Subscription_DMO) ? entities.Subscription_DMO : [];
-  const tickets = Array.isArray(entities.SupportTicket_DMO) ? entities.SupportTicket_DMO : [];
+  const customers = Array.isArray(entities.CustomerEngagement_DMO) ? entities.CustomerEngagement_DMO : [];
 
-  const customerById = new Map(customers.map((customer) => [String(customer.customerId), customer]));
+  const customerSummaries = customers.map((customer) => {
+    const sessionCount = Number(customer.sessionCount || 0);
+    const addToCartCount = Number(customer.addToCartCount || 0);
+    const cartAbandonmentCount = Number(customer.cartAbandonmentCount || 0);
+    const completedPurchaseCount = Number(customer.completedPurchaseCount || 0);
+    const conversionRate = getConversionRate(completedPurchaseCount, sessionCount);
+    const cartAbandonmentRate = getCartAbandonmentRate(cartAbandonmentCount, addToCartCount);
+    const loginStickiness = getLoginStickiness(customer.loginEventCount, customer.logoutEventCount);
+    const engagementScore = getEngagementScore(customer);
 
-  const totalNetRevenue = orders.reduce((sum, order) => sum + getNetRevenue(order), 0);
-  const totalRefundAmount = returns.reduce((sum, item) => sum + Number(item.refundAmount || 0), 0);
-  const activeSubscriptions = subscriptions.filter(isActiveSubscription).length;
+    const summary = {
+      customerId: customer.customerId,
+      customerName: customer.customerName || customer.customerId,
+      sessionCount,
+      purchasesTotal: Number(customer.purchasesTotal || 0),
+      conversionRate,
+      cartAbandonmentRate,
+      loginStickiness,
+      engagementScore
+    };
 
-  const avgResolutionHours = getAverageResolutionHours(tickets);
+    return {
+      ...summary,
+      flags: {
+        atRisk: isAtRiskCustomer(summary),
+        healthy: isHealthyCustomer(summary),
+        highAbandonmentPressure: hasHighAbandonmentPressure(summary)
+      }
+    };
+  });
+
+  const totalSessions = sum(customers, 'sessionCount');
+  const totalProductViews = sum(customers, 'productViewCount');
+  const totalAddToCart = sum(customers, 'addToCartCount');
+  const totalCheckoutStarts = sum(customers, 'checkoutStartCount');
+  const totalCompletedPurchases = sum(customers, 'completedPurchaseCount');
+  const totalPurchasesValue = sum(customers, 'purchasesTotal');
+  const totalLoginEvents = sum(customers, 'loginEventCount');
+  const totalLogoutEvents = sum(customers, 'logoutEventCount');
+  const totalCartAbandonment = sum(customers, 'cartAbandonmentCount');
+
   const businessKpis = {
     totalCustomers: customers.length,
-    totalOrders: orders.length,
-    totalNetRevenue,
-    totalRefundAmount,
-    overallRefundRate: getRefundRate(totalRefundAmount, totalNetRevenue),
-    activeSubscriptions,
-    avgResolutionHours
+    totalSessions,
+    totalProductViews,
+    totalAddToCart,
+    totalCheckoutStarts,
+    totalCompletedPurchases,
+    totalPurchasesValue,
+    overallConversionRate: getConversionRate(totalCompletedPurchases, totalSessions),
+    overallCartAbandonmentRate: getCartAbandonmentRate(totalCartAbandonment, totalAddToCart),
+    loginStickiness: getLoginStickiness(totalLoginEvents, totalLogoutEvents),
+    avgSessionDurationMinutes: customers.length ? sum(customers, 'avgSessionDurationMinutes') / customers.length : 0
   };
 
-  const ordersWithSegment = orders.map((order) => ({
-    ...order,
-    segment: customerById.get(String(order.customerId))?.segment || 'Unknown'
+  const funnelTotals = [
+    { step: 'Sessions', value: totalSessions },
+    { step: 'Product Views', value: totalProductViews },
+    { step: 'Add To Cart', value: totalAddToCart },
+    { step: 'Checkout Starts', value: totalCheckoutStarts },
+    { step: 'Completed Purchases', value: totalCompletedPurchases }
+  ];
+
+  const rateDistribution = customerSummaries.map((item) => ({
+    customerId: item.customerId,
+    customerName: item.customerName,
+    cartToCheckoutRate: Number(customers.find((c) => c.customerId === item.customerId)?.cartToCheckoutRate || 0),
+    checkoutToPurchaseRate: Number(customers.find((c) => c.customerId === item.customerId)?.checkoutToPurchaseRate || 0)
   }));
-  const returnsWithSegment = returns.map((item) => ({
-    ...item,
-    segment: customerById.get(String(item.customerId))?.segment || 'Unknown'
-  }));
-  const ticketsWithSegment = tickets.map((ticket) => ({
-    ...ticket,
-    segment: customerById.get(String(ticket.customerId))?.segment || 'Unknown'
-  }));
-
-  const customersBySegment = groupBySegment(customers, (customer) => customer.segment || 'Unknown');
-  const ordersBySegment = groupBySegment(ordersWithSegment, (order) => order.segment);
-  const returnsBySegment = groupBySegment(returnsWithSegment, (item) => item.segment);
-  const ticketsBySegment = groupBySegment(ticketsWithSegment, (ticket) => ticket.segment);
-
-  const segmentSummaries = Object.keys(customersBySegment)
-    .sort()
-    .map((segment) => {
-      const segmentOrders = ordersBySegment[segment] || [];
-      const segmentReturns = returnsBySegment[segment] || [];
-      const segmentTickets = ticketsBySegment[segment] || [];
-      const customerCount = (customersBySegment[segment] || []).length || 1;
-
-      const netRevenue = segmentOrders.reduce((sum, order) => sum + getNetRevenue(order), 0);
-      const refundAmount = segmentReturns.reduce((sum, item) => sum + Number(item.refundAmount || 0), 0);
-      const refundRate = getRefundRate(refundAmount, netRevenue);
-      const ticketRate = segmentTickets.length / customerCount;
-
-      const summary = {
-        segment,
-        customerCount,
-        orderCount: segmentOrders.length,
-        netRevenue,
-        refundAmount,
-        refundRate,
-        ticketRate
-      };
-
-      return {
-        ...summary,
-        flags: {
-          atRisk: isAtRiskSegment(summary),
-          healthy: isHealthySegment(summary),
-          highRefundPressure: hasHighRefundPressure(summary)
-        }
-      };
-    });
-
-  const monthlyRevenue = Object.entries(groupByMonth(orders, (order) => order.orderDate))
-    .map(([month, monthOrders]) => ({
-      month,
-      netRevenue: monthOrders.reduce((sum, order) => sum + getNetRevenue(order), 0)
-    }))
-    .sort((a, b) => a.month.localeCompare(b.month));
-
-  const monthlyRefunds = Object.entries(groupByMonth(returns, (item) => item.returnDate))
-    .map(([month, monthReturns]) => ({
-      month,
-      refundAmount: monthReturns.reduce((sum, item) => sum + Number(item.refundAmount || 0), 0),
-      refundsCount: monthReturns.length
-    }))
-    .sort((a, b) => a.month.localeCompare(b.month));
-
-  const subscriptionHealth = {
-    totalSubscriptions: subscriptions.length,
-    activeSubscriptions,
-    activeRate: subscriptions.length ? (activeSubscriptions / subscriptions.length) * 100 : 0
-  };
-
-  const supportHealth = {
-    totalTickets: tickets.length,
-    avgResolutionHours,
-    ticketsPerCustomer: customers.length ? tickets.length / customers.length : 0
-  };
 
   return {
     businessKpis,
-    segmentSummaries,
-    monthlyRevenue,
-    monthlyRefunds,
-    subscriptionHealth,
-    supportHealth
+    customerSummaries,
+    funnelTotals,
+    rateDistribution
   };
 }

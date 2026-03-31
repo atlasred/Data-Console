@@ -1,7 +1,7 @@
 export const managerInsightSchema = {
   type: 'object',
   required: ['headline', 'summary', 'alerts', 'recommendedActions', 'chartCaptions'],
-  chartCaptionKeys: ['netRevenueBySegment', 'refundBySegment', 'refundsOverTime']
+  chartCaptionKeys: ['purchasesByCustomer', 'conversionByCustomer', 'funnelStageTotals']
 };
 
 export function validateManagerInsights(payload) {
