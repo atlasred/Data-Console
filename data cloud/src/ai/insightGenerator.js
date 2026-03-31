@@ -158,6 +158,8 @@ function buildFallbackInsights(analysisResult = {}) {
     .filter((item) => toNumber(item.conversionRate) > 0 && toNumber(item.conversionRate) < 2)
     .map((item) => item.customerName || item.customerId)
     .slice(0, 3);
+  const vipCount = summaries.filter((item) => item.clientCategory === 'VIP').length;
+  const loyalCount = summaries.filter((item) => item.clientCategory === 'Loyal').length;
 
   const headline = topByPurchases
     ? `Top revenue customer is ${topByPurchases.customerName || topByPurchases.customerId}`
@@ -176,7 +178,8 @@ function buildFallbackInsights(analysisResult = {}) {
 
   const alerts = [
     `${atRiskCustomers.length} customers are currently flagged at risk.`,
-    `${highAbandonmentCustomers.length} customers show high abandonment pressure.`
+    `${highAbandonmentCustomers.length} customers show high abandonment pressure.`,
+    `${vipCount} VIP and ${loyalCount} Loyal customers identified for retention/upsell planning.`
   ];
 
   if (lowConversionCustomers.length) {

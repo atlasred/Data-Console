@@ -4,7 +4,7 @@ import {
   getLoginStickiness,
   getEngagementScore
 } from './metrics.js';
-import { isAtRiskCustomer, isHealthyCustomer, hasHighAbandonmentPressure } from './rules.js';
+import { isAtRiskCustomer, isHealthyCustomer, hasHighAbandonmentPressure, getClientCategory } from './rules.js';
 
 function sum(records = [], field) {
   return records.reduce((total, record) => total + Number(record[field] || 0), 0);
@@ -36,6 +36,7 @@ export function buildSemanticView(entities = {}) {
 
     return {
       ...summary,
+      clientCategory: getClientCategory(summary),
       flags: {
         atRisk: isAtRiskCustomer(summary),
         healthy: isHealthyCustomer(summary),
@@ -83,10 +84,17 @@ export function buildSemanticView(entities = {}) {
     checkoutToPurchaseRate: Number(customers.find((c) => c.customerId === item.customerId)?.checkoutToPurchaseRate || 0)
   }));
 
+  const tierBreakdown = customerSummaries.reduce((acc, customer) => {
+    const category = customer.clientCategory || 'Uncategorized';
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {});
+
   return {
     businessKpis,
     customerSummaries,
     funnelTotals,
-    rateDistribution
+    rateDistribution,
+    tierBreakdown
   };
 }

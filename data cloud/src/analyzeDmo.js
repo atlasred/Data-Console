@@ -10,6 +10,7 @@ function buildChartsFromSemantic(semanticView = {}) {
   const customerSummaries = Array.isArray(semanticView.customerSummaries) ? semanticView.customerSummaries : [];
   const funnelTotals = Array.isArray(semanticView.funnelTotals) ? semanticView.funnelTotals : [];
   const rateDistribution = Array.isArray(semanticView.rateDistribution) ? semanticView.rateDistribution : [];
+  const tierBreakdown = semanticView.tierBreakdown || {};
 
   const purchasesByCustomer = customerSummaries.map((customer) => ({
     customer: customer.customerName || customer.customerId,
@@ -27,9 +28,9 @@ function buildChartsFromSemantic(semanticView = {}) {
     value: Number(normalizeNumber(stage.value).toFixed(2))
   }));
 
-  const engagementByCustomer = customerSummaries.map((customer) => ({
-    customer: customer.customerName || customer.customerId,
-    engagementScore: Number(normalizeNumber(customer.engagementScore).toFixed(2))
+  const engagementByCustomer = Object.entries(tierBreakdown).map(([category, count]) => ({
+    category,
+    customers: Number(count || 0)
   }));
 
   const heatmap = rateDistribution.map((customer) => ({

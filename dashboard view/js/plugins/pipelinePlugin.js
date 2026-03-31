@@ -83,7 +83,7 @@ export function pipelinePlugin(root) {
   const purchasesCard = chartCard('Purchases by Customer', 'Bar');
   const conversionCard = chartCard('Conversion vs Abandonment', 'Bar');
   const funnelCard = chartCard('Funnel Stage Totals', 'Line');
-  const engagementCard = chartCard('Engagement Score by Customer', 'Donut');
+  const engagementCard = chartCard('Client Categories', 'Donut');
   const heatmapCard = chartCard('Customer × Rate', 'Heatmap');
 
   chartsGrid.append(engagementCard, purchasesCard, conversionCard, funnelCard, heatmapCard);
@@ -221,7 +221,7 @@ export function pipelinePlugin(root) {
     );
     renderDonutChart(
       engagementCard.querySelector('.chart-body'),
-      (charts.engagementByCustomer || []).map((item) => ({ label: item.customer, value: item.engagementScore }))
+      (charts.engagementByCustomer || []).map((item) => ({ label: item.category, value: item.customers }))
     );
     renderHeatmap(heatmapCard.querySelector('.chart-body'), charts.heatmap || []);
 

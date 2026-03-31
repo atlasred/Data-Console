@@ -13,6 +13,7 @@ This folder contains a standalone stream-ingestion layer, raw Data Lake Objects 
 - Validates file schema (CSV headers) against expected stream schema or accepted admin metric/value format.
 - Validates row-level governance rules from `src/dataGovernance.js`.
 - Upserts rows into DLO collections through `src/dataObjectsLake.js`.
+- Builds customer categories (e.g., `VIP`, `Loyal`, `Active`, `New`, `At Risk`) for AI summary and dashboard views.
 - Writes runtime-generated artifacts:
   - `data/objects-lake.json`
   - `data/model-objects.json`
