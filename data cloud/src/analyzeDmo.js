@@ -8,45 +8,51 @@ function normalizeNumber(value) {
 
 function buildChartsFromSemantic(semanticView = {}) {
   const customerSummaries = Array.isArray(semanticView.customerSummaries) ? semanticView.customerSummaries : [];
-  const funnelTotals = Array.isArray(semanticView.funnelTotals) ? semanticView.funnelTotals : [];
-  const rateDistribution = Array.isArray(semanticView.rateDistribution) ? semanticView.rateDistribution : [];
-  const tierBreakdown = semanticView.tierBreakdown || {};
+  const funnelEfficiency = customerSummaries.map((customer) => {
+    const completedPurchaseCount = normalizeNumber(customer.completedPurchaseCount);
+    const productViewCount = normalizeNumber(customer.productViewCount);
+    return {
+      customer: customer.customerName || customer.customerId,
+      conversionRate: productViewCount > 0 ? Number(((completedPurchaseCount / productViewCount) * 100).toFixed(2)) : 0
+    };
+  });
 
-  const purchasesByCustomer = customerSummaries.map((customer) => ({
+  const engagementVsConversion = customerSummaries.map((customer) => ({
     customer: customer.customerName || customer.customerId,
-    value: Number(normalizeNumber(customer.purchasesTotal).toFixed(2))
+    avgSessionDurationMinutes: Number(normalizeNumber(customer.avgSessionDurationMinutes).toFixed(2)),
+    completedPurchaseCount: Number(normalizeNumber(customer.completedPurchaseCount).toFixed(2))
   }));
 
-  const conversionByCustomer = customerSummaries.map((customer) => ({
+  const cartDropRate = customerSummaries.map((customer) => {
+    const cartAbandonmentCount = normalizeNumber(customer.cartAbandonmentCount);
+    const addToCartCount = normalizeNumber(customer.addToCartCount);
+    return {
+      customer: customer.customerName || customer.customerId,
+      cartAbandonmentRate: addToCartCount > 0 ? Number(((cartAbandonmentCount / addToCartCount) * 100).toFixed(2)) : 0
+    };
+  });
+
+  const customerLoyalty = customerSummaries.map((customer) => {
+    const repeatCustomerCount = normalizeNumber(customer.repeatCustomerCount);
+    const uniqueVisitorsOrCustomers = normalizeNumber(customer.uniqueVisitorsOrCustomers);
+    return {
+      customer: customer.customerName || customer.customerId,
+      repeatRate: uniqueVisitorsOrCustomers > 0 ? Number(((repeatCustomerCount / uniqueVisitorsOrCustomers) * 100).toFixed(2)) : 0
+    };
+  });
+
+  const loginImpact = customerSummaries.map((customer) => ({
     customer: customer.customerName || customer.customerId,
-    conversionRate: Number(normalizeNumber(customer.conversionRate).toFixed(2)),
-    cartAbandonmentRate: Number(normalizeNumber(customer.cartAbandonmentRate).toFixed(2))
-  }));
-
-  const funnelStageTotals = funnelTotals.map((stage) => ({
-    step: stage.step,
-    value: Number(normalizeNumber(stage.value).toFixed(2))
-  }));
-
-  const engagementByCustomer = Object.entries(tierBreakdown).map(([category, count]) => ({
-    category,
-    customers: Number(count || 0)
-  }));
-
-  const heatmap = rateDistribution.map((customer) => ({
-    segment: customer.customerName || customer.customerId,
-    metrics: {
-      cartToCheckoutRate: Number(normalizeNumber(customer.cartToCheckoutRate).toFixed(2)),
-      checkoutToPurchaseRate: Number(normalizeNumber(customer.checkoutToPurchaseRate).toFixed(2))
-    }
+    loginEventCount: Number(normalizeNumber(customer.loginEventCount).toFixed(2)),
+    purchasesTotal: Number(normalizeNumber(customer.purchasesTotal).toFixed(2))
   }));
 
   return {
-    purchasesByCustomer,
-    conversionByCustomer,
-    funnelStageTotals,
-    engagementByCustomer,
-    heatmap
+    funnelEfficiency,
+    engagementVsConversion,
+    cartDropRate,
+    customerLoyalty,
+    loginImpact
   };
 }
 

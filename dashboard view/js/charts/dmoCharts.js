@@ -187,3 +187,64 @@ export function renderHeatmap(container, grid = []) {
 
   container.append(table);
 }
+
+export function renderScatterChart(container, points = [], options = {}) {
+  clear(container);
+  if (!points.length) {
+    appendEmpty(container, 'No chart data yet. Run ingest.');
+    return;
+  }
+
+  const width = 620;
+  const height = 240;
+  const padding = { top: 18, right: 18, bottom: 34, left: 56 };
+  const plotWidth = width - padding.left - padding.right;
+  const plotHeight = height - padding.top - padding.bottom;
+  const maxX = Math.max(...points.map((point) => Number(point.x || 0)), 1);
+  const maxY = Math.max(...points.map((point) => Number(point.y || 0)), 1);
+
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  svg.setAttribute('class', 'chart-svg');
+
+  const axis = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  axis.setAttribute('d', `M ${padding.left} ${height - padding.bottom} H ${width - padding.right} M ${padding.left} ${padding.top} V ${height - padding.bottom}`);
+  axis.setAttribute('stroke', 'rgba(148, 163, 184, 0.9)');
+  axis.setAttribute('stroke-width', '1.5');
+  axis.setAttribute('fill', 'none');
+  svg.append(axis);
+
+  const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  xLabel.setAttribute('x', `${padding.left + plotWidth / 2}`);
+  xLabel.setAttribute('y', `${height - 6}`);
+  xLabel.setAttribute('text-anchor', 'middle');
+  xLabel.setAttribute('class', 'line-label');
+  xLabel.textContent = options.xLabel || 'X';
+  svg.append(xLabel);
+
+  const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  yLabel.setAttribute('x', '14');
+  yLabel.setAttribute('y', `${padding.top + plotHeight / 2}`);
+  yLabel.setAttribute('text-anchor', 'middle');
+  yLabel.setAttribute('class', 'line-label');
+  yLabel.setAttribute('transform', `rotate(-90 14 ${padding.top + plotHeight / 2})`);
+  yLabel.textContent = options.yLabel || 'Y';
+  svg.append(yLabel);
+
+  points.forEach((point) => {
+    const cx = padding.left + (Number(point.x || 0) / maxX) * plotWidth;
+    const cy = padding.top + plotHeight - (Number(point.y || 0) / maxY) * plotHeight;
+
+    const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    dot.setAttribute('cx', `${cx}`);
+    dot.setAttribute('cy', `${cy}`);
+    dot.setAttribute('r', '5');
+    dot.setAttribute('fill', 'rgba(56, 189, 248, 0.9)');
+    dot.setAttribute('stroke', 'rgba(14, 116, 144, 0.95)');
+    dot.setAttribute('stroke-width', '1');
+    dot.setAttribute('title', `${point.label}: x=${point.x}, y=${point.y}`);
+    svg.append(dot);
+  });
+
+  container.append(svg);
+}

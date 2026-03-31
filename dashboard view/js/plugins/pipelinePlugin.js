@@ -2,9 +2,7 @@ import { createKpiCard } from '../components/kpiCard.js';
 import { createSpeedometer } from '../components/speedometer.js';
 import {
   renderBarChart,
-  renderLineChart,
-  renderDonutChart,
-  renderHeatmap
+  renderScatterChart
 } from '../charts/dmoCharts.js';
 
 function sumEntityCounts(entityCounts = {}) {
@@ -80,13 +78,19 @@ export function pipelinePlugin(root) {
   chartsPanel.innerHTML = `<div class="title">Customers Analysis</div><div class="charts-grid"></div>`;
   const chartsGrid = chartsPanel.querySelector('.charts-grid');
 
-  const purchasesCard = chartCard('Purchases by Customer', 'Bar');
-  const conversionCard = chartCard('Conversion vs Abandonment', 'Bar');
-  const funnelCard = chartCard('Funnel Stage Totals', 'Line');
-  const engagementCard = chartCard('Client Categories', 'Donut');
-  const heatmapCard = chartCard('Customer × Rate', 'Heatmap');
+  const funnelEfficiencyCard = chartCard('Funnel Efficiency', 'Bar');
+  const engagementVsConversionCard = chartCard('Engagement vs Conversion', 'Scatter');
+  const cartDropRateCard = chartCard('Cart Drop Rate', 'Bar');
+  const customerLoyaltyCard = chartCard('Customer Loyalty', 'Bar');
+  const loginImpactCard = chartCard('Login Impact', 'Scatter');
 
-  chartsGrid.append(engagementCard, purchasesCard, conversionCard, funnelCard, heatmapCard);
+  chartsGrid.append(
+    funnelEfficiencyCard,
+    engagementVsConversionCard,
+    cartDropRateCard,
+    customerLoyaltyCard,
+    loginImpactCard
+  );
 
   const aiPanel = document.createElement('article');
   aiPanel.className = 'panel compact';
@@ -206,24 +210,38 @@ export function pipelinePlugin(root) {
     const charts = analytics?.charts || {};
 
     renderBarChart(
-      purchasesCard.querySelector('.chart-body'),
-      (charts.purchasesByCustomer || []).map((item) => ({ label: item.customer, value: item.value })),
-      { decimals: 1 }
-    );
-    renderBarChart(
-      conversionCard.querySelector('.chart-body'),
-      (charts.conversionByCustomer || []).map((item) => ({ label: item.customer, value: item.conversionRate })),
+      funnelEfficiencyCard.querySelector('.chart-body'),
+      (charts.funnelEfficiency || []).map((item) => ({ label: item.customer, value: item.conversionRate })),
       { decimals: 1, unit: '%' }
     );
-    renderLineChart(
-      funnelCard.querySelector('.chart-body'),
-      (charts.funnelStageTotals || []).map((item) => ({ label: item.step, value: item.value }))
+    renderScatterChart(
+      engagementVsConversionCard.querySelector('.chart-body'),
+      (charts.engagementVsConversion || []).map((item) => ({
+        label: item.customer,
+        x: item.avgSessionDurationMinutes,
+        y: item.completedPurchaseCount
+      })),
+      { xLabel: 'Avg Session Duration (min)', yLabel: 'Completed Purchases' }
     );
-    renderDonutChart(
-      engagementCard.querySelector('.chart-body'),
-      (charts.engagementByCustomer || []).map((item) => ({ label: item.category, value: item.customers }))
+    renderBarChart(
+      cartDropRateCard.querySelector('.chart-body'),
+      (charts.cartDropRate || []).map((item) => ({ label: item.customer, value: item.cartAbandonmentRate })),
+      { decimals: 1, unit: '%' }
     );
-    renderHeatmap(heatmapCard.querySelector('.chart-body'), charts.heatmap || []);
+    renderBarChart(
+      customerLoyaltyCard.querySelector('.chart-body'),
+      (charts.customerLoyalty || []).map((item) => ({ label: item.customer, value: item.repeatRate })),
+      { decimals: 1, unit: '%' }
+    );
+    renderScatterChart(
+      loginImpactCard.querySelector('.chart-body'),
+      (charts.loginImpact || []).map((item) => ({
+        label: item.customer,
+        x: item.loginEventCount,
+        y: item.purchasesTotal
+      })),
+      { xLabel: 'Login Events', yLabel: 'Purchases Total' }
+    );
 
     renderAiSummary(analytics.managerInsights || {});
   }

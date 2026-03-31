@@ -104,9 +104,11 @@ function normalizeStringArray(value) {
 function normalizeChartCaptions(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
-    purchasesByCustomer: String(source.purchasesByCustomer ?? '').trim(),
-    conversionByCustomer: String(source.conversionByCustomer ?? '').trim(),
-    funnelStageTotals: String(source.funnelStageTotals ?? '').trim()
+    funnelEfficiency: String(source.funnelEfficiency ?? '').trim(),
+    engagementVsConversion: String(source.engagementVsConversion ?? '').trim(),
+    cartDropRate: String(source.cartDropRate ?? '').trim(),
+    customerLoyalty: String(source.customerLoyalty ?? '').trim(),
+    loginImpact: String(source.loginImpact ?? '').trim()
   };
 }
 
@@ -150,9 +152,8 @@ function buildFallbackInsights(analysisResult = {}) {
     .slice()
     .sort((a, b) => toNumber(b.purchasesTotal) - toNumber(a.purchasesTotal))[0];
 
-  const topByConversion = summaries
-    .slice()
-    .sort((a, b) => toNumber(b.conversionRate) - toNumber(a.conversionRate))[0];
+  const topByConversion = summaries.slice().sort((a, b) => toNumber(b.conversionRate) - toNumber(a.conversionRate))[0];
+  const topLoginValue = summaries.slice().sort((a, b) => toNumber(b.loginEventCount) - toNumber(a.loginEventCount))[0];
 
   const lowConversionCustomers = summaries
     .filter((item) => toNumber(item.conversionRate) > 0 && toNumber(item.conversionRate) < 2)
@@ -189,8 +190,14 @@ function buildFallbackInsights(analysisResult = {}) {
   const recommendedActions = [
     'Launch recovery automation for customers with high cart abandonment (email/push within 1 hour).',
     'Create a nurture segment for low-conversion customers and A/B test checkout friction fixes.',
-    'Use top-converting customer behaviors as a benchmark audience for lookalike targeting.'
+    'Run campaigns for high-login but low-purchase customers to improve login-to-revenue conversion.'
   ];
+
+  if (topLoginValue) {
+    recommendedActions.push(
+      `Compare ${topLoginValue.customerName || topLoginValue.customerId}'s login pattern against low-login cohorts to validate if logged-in users are more likely to buy.`
+    );
+  }
 
   return {
     headline,
@@ -198,9 +205,11 @@ function buildFallbackInsights(analysisResult = {}) {
     alerts,
     recommendedActions,
     chartCaptions: {
-      purchasesByCustomer: 'Purchases are concentrated among a small set of customers; monitor concentration risk.',
-      conversionByCustomer: 'Conversion and abandonment gaps highlight where checkout optimizations should focus.',
-      funnelStageTotals: 'The funnel chart shows where customer drop-off is highest from session to purchase.'
+      funnelEfficiency: 'Conversion rate is completedPurchaseCount divided by productViewCount.',
+      engagementVsConversion: 'Use this scatter to see if higher session duration aligns with more completed purchases.',
+      cartDropRate: 'Cart drop rate is cartAbandonmentCount divided by addToCartCount.',
+      customerLoyalty: 'Repeat rate is repeatCustomerCount divided by uniqueVisitorsOrCustomers.',
+      loginImpact: 'Use this scatter to test whether users with more login events generate higher purchasesTotal.'
     }
   };
 }

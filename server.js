@@ -42,11 +42,11 @@ function readDmoAnalytics() {
     return {
       generatedAt: null,
       charts: {
-        purchasesByCustomer: [],
-        conversionByCustomer: [],
-        funnelStageTotals: [],
-        engagementByCustomer: [],
-        heatmap: []
+        funnelEfficiency: [],
+        engagementVsConversion: [],
+        cartDropRate: [],
+        customerLoyalty: [],
+        loginImpact: []
       }
     };
   }
