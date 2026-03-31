@@ -217,8 +217,20 @@ async function ingestAllCsv(csvFolderPath, dataLake, streamDefinitions = []) {
         continue;
       }
 
-      await streamCsvIntoLake(fullPath, dataLake, streamConfig);
-      processed.push(fileName);
+      try {
+        await streamCsvIntoLake(fullPath, dataLake, streamConfig);
+        processed.push(fileName);
+      } catch (error) {
+        const shouldSkip = Boolean(streamConfig.skipOnHeaderMismatch)
+          && String(error?.message || '').includes('header mismatch');
+
+        if (shouldSkip) {
+          console.warn(`Skipped ${fileName}: ${error.message}`);
+          continue;
+        }
+
+        throw error;
+      }
     }
   }
 

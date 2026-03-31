@@ -22,7 +22,7 @@ const CUSTOMER_METRIC_HEADERS = [
 const STREAM_DEFINITIONS = [
   {
     streamName: 'customer_engagement_stream',
-    filePattern: '^customers.*\\.csv$',
+    filePattern: '\\.csv$',
     expectedHeaders: CUSTOMER_METRIC_HEADERS,
     acceptedHeaderSets: [['metric', 'value']],
     format: 'auto',
@@ -50,6 +50,7 @@ const STREAM_DEFINITIONS = [
     },
     dloName: 'CustomerEngagement_DLO',
     primaryKey: 'customerId',
+    skipOnHeaderMismatch: true,
     description: 'Customer engagement and funnel metrics from admin exports.'
   }
 ];
