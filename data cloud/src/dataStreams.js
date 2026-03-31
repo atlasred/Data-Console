@@ -1,5 +1,22 @@
 const STREAM_DEFINITIONS = [
   {
+    streamName: 'customers_stream',
+    fileName: 'customers.csv',
+    expectedHeaders: ['id', 'email', 'segment', 'lifetimeValue'],
+    acceptedHeaderSets: [['metric', 'value']],
+    format: 'auto',
+    metricColumn: 'metric',
+    valueColumn: 'value',
+    metricMap: {
+      customerId: 'id',
+      customerName: 'name',
+      purchasesTotal: 'lifetimeValue'
+    },
+    dloName: 'Customer_DLO',
+    primaryKey: 'id',
+    description: 'Admin customer stream; supports both tabular CSV and metric/value exports.'
+  },
+  {
     streamName: 'customer_profiles_stream',
     fileName: 'customer_profiles.csv',
     expectedHeaders: ['id', 'email', 'segment', 'region', 'signupDate'],
