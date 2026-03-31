@@ -41,6 +41,13 @@ cd "data console/data cloud"
 npm run ingest:schedule
 ```
 
+## Generate customer spectrum test data (20 files)
+```bash
+cd "data console/data cloud"
+npm run generate:spectrum
+```
+This creates 20 metric/value CSV files in `csv-exports/customer-spectrum/` and writes expected outcomes to `data/customer-spectrum-expected.json`.
+
 ## Run ingest from dashboard button
 ```bash
 cd "data console"

@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-011
+customerName,Aqua Trail
+sessionCount,36
+uniqueVisitorsOrCustomers,1
+productViewCount,90
+addToCartCount,24
+cartAbandonmentCount,6
+abandonedCartsCount,6
+checkoutStartCount,17
+completedPurchaseCount,2
+purchasesTotal,180
+repeatCustomerCount,2
+avgSessionDurationMinutes,7
+avgLoggedInMinutes,5
+loginEventCount,22
+logoutEventCount,21
+cartToCheckoutRate,70.83
+checkoutToPurchaseRate,11.76

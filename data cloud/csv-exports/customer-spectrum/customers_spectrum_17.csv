@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-017
+customerName,Drift Cart
+sessionCount,19
+uniqueVisitorsOrCustomers,1
+productViewCount,140
+addToCartCount,40
+cartAbandonmentCount,20
+abandonedCartsCount,20
+checkoutStartCount,8
+completedPurchaseCount,1
+purchasesTotal,42
+repeatCustomerCount,1
+avgSessionDurationMinutes,6
+avgLoggedInMinutes,4
+loginEventCount,26
+logoutEventCount,25
+cartToCheckoutRate,20
+checkoutToPurchaseRate,12.5

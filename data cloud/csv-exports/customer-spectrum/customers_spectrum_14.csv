@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-014
+customerName,Bloom Basket
+sessionCount,2
+uniqueVisitorsOrCustomers,1
+productViewCount,16
+addToCartCount,3
+cartAbandonmentCount,1
+abandonedCartsCount,1
+checkoutStartCount,2
+completedPurchaseCount,1
+purchasesTotal,28
+repeatCustomerCount,0
+avgSessionDurationMinutes,4
+avgLoggedInMinutes,3
+loginEventCount,3
+logoutEventCount,2
+cartToCheckoutRate,66.67
+checkoutToPurchaseRate,50

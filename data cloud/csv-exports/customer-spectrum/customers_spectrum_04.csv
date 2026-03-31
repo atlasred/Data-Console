@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-004
+customerName,Pioneer Supply
+sessionCount,110
+uniqueVisitorsOrCustomers,1
+productViewCount,395
+addToCartCount,126
+cartAbandonmentCount,15
+abandonedCartsCount,15
+checkoutStartCount,101
+completedPurchaseCount,10
+purchasesTotal,4200
+repeatCustomerCount,36
+avgSessionDurationMinutes,15
+avgLoggedInMinutes,12
+loginEventCount,77
+logoutEventCount,70
+cartToCheckoutRate,80.16
+checkoutToPurchaseRate,9.9

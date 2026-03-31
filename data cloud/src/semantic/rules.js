@@ -33,12 +33,12 @@ export function getClientCategory(summary = {}) {
     return 'VIP';
   }
 
-  if (isAtRiskCustomer(summary)) {
-    return 'At Risk';
+  if (sessionCount > 0 && sessionCount <= 2) {
+    return 'New';
   }
 
-  if (sessionCount <= 2 || engagementScore < 10) {
-    return 'New';
+  if (isAtRiskCustomer(summary)) {
+    return 'At Risk';
   }
 
   if (isHealthyCustomer(summary)) {

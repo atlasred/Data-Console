@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-012
+customerName,Civic Craft
+sessionCount,30
+uniqueVisitorsOrCustomers,1
+productViewCount,82
+addToCartCount,21
+cartAbandonmentCount,5
+abandonedCartsCount,5
+checkoutStartCount,15
+completedPurchaseCount,2
+purchasesTotal,150
+repeatCustomerCount,2
+avgSessionDurationMinutes,6
+avgLoggedInMinutes,4
+loginEventCount,20
+logoutEventCount,19
+cartToCheckoutRate,71.43
+checkoutToPurchaseRate,13.33

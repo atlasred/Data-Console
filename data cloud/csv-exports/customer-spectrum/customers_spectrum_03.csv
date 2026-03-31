@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-003
+customerName,Granite Goods
+sessionCount,118
+uniqueVisitorsOrCustomers,1
+productViewCount,430
+addToCartCount,132
+cartAbandonmentCount,16
+abandonedCartsCount,16
+checkoutStartCount,109
+completedPurchaseCount,12
+purchasesTotal,4700
+repeatCustomerCount,39
+avgSessionDurationMinutes,15
+avgLoggedInMinutes,13
+loginEventCount,80
+logoutEventCount,73
+cartToCheckoutRate,82.58
+checkoutToPurchaseRate,11.01

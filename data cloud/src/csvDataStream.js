@@ -39,6 +39,30 @@ function inferEntityName(filePath) {
   return path.basename(filePath, path.extname(filePath)).toLowerCase();
 }
 
+function discoverCsvFileNames(rootPath) {
+  const discovered = [];
+
+  function visit(currentRelativePath = '') {
+    const currentAbsolutePath = path.join(rootPath, currentRelativePath);
+    const entries = fs.readdirSync(currentAbsolutePath, { withFileTypes: true });
+
+    entries.forEach((entry) => {
+      const nextRelativePath = path.join(currentRelativePath, entry.name);
+      if (entry.isDirectory()) {
+        visit(nextRelativePath);
+        return;
+      }
+
+      if (entry.isFile() && entry.name.toLowerCase().endsWith('.csv')) {
+        discovered.push(nextRelativePath);
+      }
+    });
+  }
+
+  visit('');
+  return discovered.sort();
+}
+
 function normalizeHeaderName(value) {
   return String(value || '').trim().toLowerCase();
 }
@@ -172,10 +196,7 @@ async function streamCsvIntoLake(filePath, dataLake, streamConfig = {}) {
 }
 
 async function ingestAllCsv(csvFolderPath, dataLake, streamDefinitions = []) {
-  const discoveredFileNames = fs
-    .readdirSync(csvFolderPath)
-    .filter((name) => name.toLowerCase().endsWith('.csv'))
-    .sort();
+  const discoveredFileNames = discoverCsvFileNames(csvFolderPath);
 
   const hasConfiguredStreams = Array.isArray(streamDefinitions) && streamDefinitions.length > 0;
 
