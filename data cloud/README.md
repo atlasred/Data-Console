@@ -3,24 +3,17 @@
 This folder contains a standalone stream-ingestion layer, raw Data Lake Objects (DLOs), and runtime-generated Data Model Objects (DMOs).
 
 ## Data Streams (CSV -> Stream)
-- `customer_profiles_stream` -> `customer_profiles.csv`
-- `customer_orders_stream` -> `customer_orders.csv`
-- `customer_returns_stream` -> `customer_returns.csv`
-- `customer_subscriptions_stream` -> `customer_subscriptions.csv`
-- `customer_support_tickets_stream` -> `customer_support_tickets.csv`
+- `customer_engagement_stream` -> `customers*.csv` (supports both tabular customer metrics headers and `metric,value` admin exports)
 
 ## Raw DLO outputs
-- `CustomerProfile_DLO`
-- `CustomerOrder_DLO`
-- `CustomerReturn_DLO`
-- `CustomerSubscription_DLO`
-- `CustomerSupportTicket_DLO`
+- `CustomerEngagement_DLO`
 
 ## What the pipeline does
 - Reads CSV files from `csv-exports/`.
-- Validates file schema (CSV headers) against expected stream schema.
+- Validates file schema (CSV headers) against expected stream schema or accepted admin metric/value format.
 - Validates row-level governance rules from `src/dataGovernance.js`.
 - Upserts rows into DLO collections through `src/dataObjectsLake.js`.
+- Builds customer categories (e.g., `VIP`, `Loyal`, `Active`, `New`, `At Risk`) for AI summary and dashboard views.
 - Writes runtime-generated artifacts:
   - `data/objects-lake.json`
   - `data/model-objects.json`
@@ -47,6 +40,13 @@ npm run ingest:watch
 cd "data console/data cloud"
 npm run ingest:schedule
 ```
+
+## Generate customer spectrum test data (20 files)
+```bash
+cd "data console/data cloud"
+npm run generate:spectrum
+```
+This creates 20 metric/value CSV files in `csv-exports/customer-spectrum/` and writes expected outcomes to `data/customer-spectrum-expected.json`.
 
 ## Run ingest from dashboard button
 ```bash

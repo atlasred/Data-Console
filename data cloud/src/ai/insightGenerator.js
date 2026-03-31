@@ -104,9 +104,9 @@ function normalizeStringArray(value) {
 function normalizeChartCaptions(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
-    netRevenueBySegment: String(source.netRevenueBySegment ?? '').trim(),
-    refundBySegment: String(source.refundBySegment ?? '').trim(),
-    refundsOverTime: String(source.refundsOverTime ?? '').trim()
+    purchasesByCustomer: String(source.purchasesByCustomer ?? '').trim(),
+    conversionByCustomer: String(source.conversionByCustomer ?? '').trim(),
+    funnelStageTotals: String(source.funnelStageTotals ?? '').trim()
   };
 }
 
@@ -131,6 +131,80 @@ export function parseManagerInsightsJson(rawText = '') {
   }
 }
 
+function toNumber(value, fallback = 0) {
+  const parsed = Number(value);
+  return Number.isNaN(parsed) ? fallback : parsed;
+}
+
+function buildFallbackInsights(analysisResult = {}) {
+  const summaries = Array.isArray(analysisResult.customerSummaries) ? analysisResult.customerSummaries : [];
+  const kpis = analysisResult.businessKpis || {};
+  const atRiskCustomers = Array.isArray(analysisResult?.comparisonFlags?.atRiskCustomers)
+    ? analysisResult.comparisonFlags.atRiskCustomers
+    : [];
+  const highAbandonmentCustomers = Array.isArray(analysisResult?.comparisonFlags?.highAbandonmentCustomers)
+    ? analysisResult.comparisonFlags.highAbandonmentCustomers
+    : [];
+
+  const topByPurchases = summaries
+    .slice()
+    .sort((a, b) => toNumber(b.purchasesTotal) - toNumber(a.purchasesTotal))[0];
+
+  const topByConversion = summaries
+    .slice()
+    .sort((a, b) => toNumber(b.conversionRate) - toNumber(a.conversionRate))[0];
+
+  const lowConversionCustomers = summaries
+    .filter((item) => toNumber(item.conversionRate) > 0 && toNumber(item.conversionRate) < 2)
+    .map((item) => item.customerName || item.customerId)
+    .slice(0, 3);
+  const vipCount = summaries.filter((item) => item.clientCategory === 'VIP').length;
+  const loyalCount = summaries.filter((item) => item.clientCategory === 'Loyal').length;
+
+  const headline = topByPurchases
+    ? `Top revenue customer is ${topByPurchases.customerName || topByPurchases.customerId}`
+    : 'Customer engagement summary is ready';
+
+  const summaryParts = [
+    `Tracked ${toNumber(kpis.totalCustomers)} customers with ${toNumber(kpis.totalSessions)} sessions and ${toNumber(kpis.totalCompletedPurchases)} completed purchases.`,
+    `Overall conversion is ${toNumber(kpis.overallConversionRate).toFixed(2)}% with cart abandonment at ${toNumber(kpis.overallCartAbandonmentRate).toFixed(2)}%.`
+  ];
+
+  if (topByConversion) {
+    summaryParts.push(
+      `Best converter: ${topByConversion.customerName || topByConversion.customerId} at ${toNumber(topByConversion.conversionRate).toFixed(2)}%.`
+    );
+  }
+
+  const alerts = [
+    `${atRiskCustomers.length} customers are currently flagged at risk.`,
+    `${highAbandonmentCustomers.length} customers show high abandonment pressure.`,
+    `${vipCount} VIP and ${loyalCount} Loyal customers identified for retention/upsell planning.`
+  ];
+
+  if (lowConversionCustomers.length) {
+    alerts.push(`Low-conversion customers to watch: ${lowConversionCustomers.join(', ')}.`);
+  }
+
+  const recommendedActions = [
+    'Launch recovery automation for customers with high cart abandonment (email/push within 1 hour).',
+    'Create a nurture segment for low-conversion customers and A/B test checkout friction fixes.',
+    'Use top-converting customer behaviors as a benchmark audience for lookalike targeting.'
+  ];
+
+  return {
+    headline,
+    summary: summaryParts.join(' '),
+    alerts,
+    recommendedActions,
+    chartCaptions: {
+      purchasesByCustomer: 'Purchases are concentrated among a small set of customers; monitor concentration risk.',
+      conversionByCustomer: 'Conversion and abandonment gaps highlight where checkout optimizations should focus.',
+      funnelStageTotals: 'The funnel chart shows where customer drop-off is highest from session to purchase.'
+    }
+  };
+}
+
 export async function generateManagerInsights(analysisResult = {}, options = {}) {
   const model = options.model || process.env.OLLAMA_MODEL || 'llama3.1';
   const prompt = buildManagerPrompt(analysisResult);
@@ -141,11 +215,11 @@ export async function generateManagerInsights(analysisResult = {}, options = {})
   });
 
   if (run.error) {
-    throw new Error(`Ollama execution failed: ${run.error.message}`);
+    return buildFallbackInsights(analysisResult);
   }
 
   if (run.status !== 0) {
-    throw new Error(`Ollama returned non-zero status (${run.status}): ${run.stderr || run.stdout}`);
+    return buildFallbackInsights(analysisResult);
   }
 
   const parsed = parseManagerInsightsJson(run.stdout || '');

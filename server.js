@@ -42,10 +42,10 @@ function readDmoAnalytics() {
     return {
       generatedAt: null,
       charts: {
-        netRevenueBySegment: [],
-        refundBySegment: [],
-        refundsOverTime: [],
-        customerMixBySegment: [],
+        purchasesByCustomer: [],
+        conversionByCustomer: [],
+        funnelStageTotals: [],
+        engagementByCustomer: [],
         heatmap: []
       }
     };

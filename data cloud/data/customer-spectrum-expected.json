@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-31T15:41:36.161Z",
+  "folder": "csv-exports/customer-spectrum",
+  "filesGenerated": 20,
+  "expectedCategoryDistribution": {
+    "VIP": 4,
+    "Loyal": 4,
+    "Active": 4,
+    "New": 4,
+    "At Risk": 4
+  },
+  "expectedTopCustomersByPurchases": [
+    {
+      "customerId": "cu-spectrum-001",
+      "customerName": "Atlas Retail",
+      "purchasesTotal": 6400
+    },
+    {
+      "customerId": "cu-spectrum-002",
+      "customerName": "North Peak Co",
+      "purchasesTotal": 5300
+    },
+    {
+      "customerId": "cu-spectrum-003",
+      "customerName": "Granite Goods",
+      "purchasesTotal": 4700
+    },
+    {
+      "customerId": "cu-spectrum-004",
+      "customerName": "Pioneer Supply",
+      "purchasesTotal": 4200
+    },
+    {
+      "customerId": "cu-spectrum-005",
+      "customerName": "Lumen Home",
+      "purchasesTotal": 860
+    }
+  ]
+}

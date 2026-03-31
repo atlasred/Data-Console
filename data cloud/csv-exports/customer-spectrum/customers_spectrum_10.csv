@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-010
+customerName,Horizon Kits
+sessionCount,40
+uniqueVisitorsOrCustomers,1
+productViewCount,104
+addToCartCount,27
+cartAbandonmentCount,6
+abandonedCartsCount,6
+checkoutStartCount,19
+completedPurchaseCount,2
+purchasesTotal,210
+repeatCustomerCount,3
+avgSessionDurationMinutes,7
+avgLoggedInMinutes,5
+loginEventCount,24
+logoutEventCount,23
+cartToCheckoutRate,70.37
+checkoutToPurchaseRate,10.53

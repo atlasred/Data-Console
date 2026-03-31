@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-001
+customerName,Atlas Retail
+sessionCount,140
+uniqueVisitorsOrCustomers,1
+productViewCount,520
+addToCartCount,160
+cartAbandonmentCount,20
+abandonedCartsCount,20
+checkoutStartCount,130
+completedPurchaseCount,18
+purchasesTotal,6400
+repeatCustomerCount,52
+avgSessionDurationMinutes,18
+avgLoggedInMinutes,16
+loginEventCount,95
+logoutEventCount,87
+cartToCheckoutRate,81.25
+checkoutToPurchaseRate,13.85

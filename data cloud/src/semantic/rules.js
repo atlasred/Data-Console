@@ -2,14 +2,48 @@
  * Rules consume semantic summaries only (no raw DMO rows).
  */
 
-export function hasHighRefundPressure(summary = {}) {
-  return Number(summary.refundRate ?? 0) >= 12;
+export function hasHighAbandonmentPressure(summary = {}) {
+  return Number(summary.cartAbandonmentRate ?? 0) >= 35;
 }
 
-export function isAtRiskSegment(summary = {}) {
-  return hasHighRefundPressure(summary) || Number(summary.ticketRate ?? 0) >= 1.1;
+export function isAtRiskCustomer(summary = {}) {
+  return (
+    hasHighAbandonmentPressure(summary) ||
+    Number(summary.conversionRate ?? 0) < 2 ||
+    Number(summary.sessionCount ?? 0) === 0
+  );
 }
 
-export function isHealthySegment(summary = {}) {
-  return Number(summary.netRevenue ?? 0) > 0 && Number(summary.refundRate ?? 0) < 8 && Number(summary.ticketRate ?? 0) < 0.8;
+export function isHealthyCustomer(summary = {}) {
+  return (
+    Number(summary.conversionRate ?? 0) >= 5 &&
+    Number(summary.cartAbandonmentRate ?? 0) < 20 &&
+    Number(summary.engagementScore ?? 0) > 15
+  );
+}
+
+export function getClientCategory(summary = {}) {
+  const purchasesTotal = Number(summary.purchasesTotal ?? 0);
+  const conversionRate = Number(summary.conversionRate ?? 0);
+  const engagementScore = Number(summary.engagementScore ?? 0);
+  const abandonmentRate = Number(summary.cartAbandonmentRate ?? 0);
+  const sessionCount = Number(summary.sessionCount ?? 0);
+
+  if (purchasesTotal >= 1000 && conversionRate >= 8 && abandonmentRate < 20) {
+    return 'VIP';
+  }
+
+  if (sessionCount > 0 && sessionCount <= 2) {
+    return 'New';
+  }
+
+  if (isAtRiskCustomer(summary)) {
+    return 'At Risk';
+  }
+
+  if (isHealthyCustomer(summary)) {
+    return 'Loyal';
+  }
+
+  return 'Active';
 }

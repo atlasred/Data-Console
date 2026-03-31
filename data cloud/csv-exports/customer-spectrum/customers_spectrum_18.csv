@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-018
+customerName,Quiet Harbor
+sessionCount,15
+uniqueVisitorsOrCustomers,1
+productViewCount,95
+addToCartCount,25
+cartAbandonmentCount,14
+abandonedCartsCount,14
+checkoutStartCount,5
+completedPurchaseCount,0
+purchasesTotal,0
+repeatCustomerCount,0
+avgSessionDurationMinutes,5
+avgLoggedInMinutes,3
+loginEventCount,20
+logoutEventCount,20
+cartToCheckoutRate,20
+checkoutToPurchaseRate,0

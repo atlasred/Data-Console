@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-013
+customerName,Nova Start
+sessionCount,2
+uniqueVisitorsOrCustomers,1
+productViewCount,18
+addToCartCount,4
+cartAbandonmentCount,1
+abandonedCartsCount,1
+checkoutStartCount,3
+completedPurchaseCount,1
+purchasesTotal,35
+repeatCustomerCount,0
+avgSessionDurationMinutes,5
+avgLoggedInMinutes,4
+loginEventCount,3
+logoutEventCount,3
+cartToCheckoutRate,75
+checkoutToPurchaseRate,33.33

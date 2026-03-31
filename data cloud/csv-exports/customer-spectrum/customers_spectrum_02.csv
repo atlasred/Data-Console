@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-002
+customerName,North Peak Co
+sessionCount,128
+uniqueVisitorsOrCustomers,1
+productViewCount,470
+addToCartCount,145
+cartAbandonmentCount,18
+abandonedCartsCount,18
+checkoutStartCount,118
+completedPurchaseCount,14
+purchasesTotal,5300
+repeatCustomerCount,44
+avgSessionDurationMinutes,16
+avgLoggedInMinutes,14
+loginEventCount,88
+logoutEventCount,82
+cartToCheckoutRate,81.38
+checkoutToPurchaseRate,11.86

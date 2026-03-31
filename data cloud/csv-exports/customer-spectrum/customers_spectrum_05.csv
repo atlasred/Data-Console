@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-005
+customerName,Lumen Home
+sessionCount,80
+uniqueVisitorsOrCustomers,1
+productViewCount,240
+addToCartCount,68
+cartAbandonmentCount,10
+abandonedCartsCount,10
+checkoutStartCount,55
+completedPurchaseCount,8
+purchasesTotal,860
+repeatCustomerCount,18
+avgSessionDurationMinutes,12
+avgLoggedInMinutes,10
+loginEventCount,52
+logoutEventCount,47
+cartToCheckoutRate,80.88
+checkoutToPurchaseRate,14.55

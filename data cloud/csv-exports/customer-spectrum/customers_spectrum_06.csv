@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-006
+customerName,Aster Labs
+sessionCount,75
+uniqueVisitorsOrCustomers,1
+productViewCount,230
+addToCartCount,64
+cartAbandonmentCount,9
+abandonedCartsCount,9
+checkoutStartCount,53
+completedPurchaseCount,7
+purchasesTotal,790
+repeatCustomerCount,16
+avgSessionDurationMinutes,11
+avgLoggedInMinutes,9
+loginEventCount,49
+logoutEventCount,44
+cartToCheckoutRate,82.81
+checkoutToPurchaseRate,13.21
