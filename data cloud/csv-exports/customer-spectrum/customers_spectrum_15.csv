@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-015
+customerName,Fresh Orbit
+sessionCount,1
+uniqueVisitorsOrCustomers,1
+productViewCount,10
+addToCartCount,2
+cartAbandonmentCount,1
+abandonedCartsCount,1
+checkoutStartCount,1
+completedPurchaseCount,0
+purchasesTotal,0
+repeatCustomerCount,0
+avgSessionDurationMinutes,3
+avgLoggedInMinutes,2
+loginEventCount,2
+logoutEventCount,2
+cartToCheckoutRate,50
+checkoutToPurchaseRate,0

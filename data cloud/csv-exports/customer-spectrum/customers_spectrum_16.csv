@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-016
+customerName,Nimble Nest
+sessionCount,1
+uniqueVisitorsOrCustomers,1
+productViewCount,9
+addToCartCount,2
+cartAbandonmentCount,0
+abandonedCartsCount,0
+checkoutStartCount,1
+completedPurchaseCount,0
+purchasesTotal,0
+repeatCustomerCount,0
+avgSessionDurationMinutes,3
+avgLoggedInMinutes,2
+loginEventCount,2
+logoutEventCount,1
+cartToCheckoutRate,50
+checkoutToPurchaseRate,0

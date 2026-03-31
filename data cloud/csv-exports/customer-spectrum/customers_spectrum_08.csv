@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-008
+customerName,Summit Thread
+sessionCount,60
+uniqueVisitorsOrCustomers,1
+productViewCount,195
+addToCartCount,51
+cartAbandonmentCount,7
+abandonedCartsCount,7
+checkoutStartCount,44
+completedPurchaseCount,5
+purchasesTotal,640
+repeatCustomerCount,12
+avgSessionDurationMinutes,9
+avgLoggedInMinutes,8
+loginEventCount,42
+logoutEventCount,38
+cartToCheckoutRate,86.27
+checkoutToPurchaseRate,11.36

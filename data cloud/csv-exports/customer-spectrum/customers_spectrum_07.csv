@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-007
+customerName,Verde Studio
+sessionCount,68
+uniqueVisitorsOrCustomers,1
+productViewCount,215
+addToCartCount,58
+cartAbandonmentCount,8
+abandonedCartsCount,8
+checkoutStartCount,49
+completedPurchaseCount,6
+purchasesTotal,720
+repeatCustomerCount,14
+avgSessionDurationMinutes,10
+avgLoggedInMinutes,8
+loginEventCount,47
+logoutEventCount,42
+cartToCheckoutRate,84.48
+checkoutToPurchaseRate,12.24

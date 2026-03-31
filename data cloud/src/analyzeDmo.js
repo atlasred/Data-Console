@@ -7,48 +7,52 @@ function normalizeNumber(value) {
 }
 
 function buildChartsFromSemantic(semanticView = {}) {
-  const segmentSummaries = Array.isArray(semanticView.segmentSummaries) ? semanticView.segmentSummaries : [];
-  const monthlyRefunds = Array.isArray(semanticView.monthlyRefunds) ? semanticView.monthlyRefunds : [];
+  const customerSummaries = Array.isArray(semanticView.customerSummaries) ? semanticView.customerSummaries : [];
+  const funnelEfficiency = customerSummaries.map((customer) => {
+    const completedPurchaseCount = normalizeNumber(customer.completedPurchaseCount);
+    const productViewCount = normalizeNumber(customer.productViewCount);
+    return {
+      customer: customer.customerName || customer.customerId,
+      conversionRate: productViewCount > 0 ? Number(((completedPurchaseCount / productViewCount) * 100).toFixed(2)) : 0
+    };
+  });
 
-  const netRevenueBySegment = segmentSummaries.map((segment) => ({
-    segment: segment.segment,
-    value: Number(normalizeNumber(segment.netRevenue).toFixed(2))
+  const engagementVsConversion = customerSummaries.map((customer) => ({
+    customer: customer.customerName || customer.customerId,
+    avgSessionDurationMinutes: Number(normalizeNumber(customer.avgSessionDurationMinutes).toFixed(2)),
+    completedPurchaseCount: Number(normalizeNumber(customer.completedPurchaseCount).toFixed(2))
   }));
 
-  const refundBySegment = segmentSummaries.map((segment) => ({
-    segment: segment.segment,
-    refundAmount: Number(normalizeNumber(segment.refundAmount).toFixed(2)),
-    refundRate: Number(normalizeNumber(segment.refundRate).toFixed(2))
-  }));
+  const cartDropRate = customerSummaries.map((customer) => {
+    const cartAbandonmentCount = normalizeNumber(customer.cartAbandonmentCount);
+    const addToCartCount = normalizeNumber(customer.addToCartCount);
+    return {
+      customer: customer.customerName || customer.customerId,
+      cartAbandonmentRate: addToCartCount > 0 ? Number(((cartAbandonmentCount / addToCartCount) * 100).toFixed(2)) : 0
+    };
+  });
 
-  const refundsOverTime = monthlyRefunds.map((month) => ({
-    month: month.month,
-    refundAmount: Number(normalizeNumber(month.refundAmount).toFixed(2)),
-    refundsCount: Number(month.refundsCount || 0)
-  }));
+  const customerLoyalty = customerSummaries.map((customer) => {
+    const repeatCustomerCount = normalizeNumber(customer.repeatCustomerCount);
+    const uniqueVisitorsOrCustomers = normalizeNumber(customer.uniqueVisitorsOrCustomers);
+    return {
+      customer: customer.customerName || customer.customerId,
+      repeatRate: uniqueVisitorsOrCustomers > 0 ? Number(((repeatCustomerCount / uniqueVisitorsOrCustomers) * 100).toFixed(2)) : 0
+    };
+  });
 
-  const customerMixBySegment = segmentSummaries.map((segment) => ({
-    segment: segment.segment,
-    customers: Number(segment.customerCount || 0)
-  }));
-
-  const heatmap = segmentSummaries.map((segment) => ({
-    segment: segment.segment,
-    metrics: {
-      netRevenue: Number(normalizeNumber(segment.netRevenue).toFixed(2)),
-      refundAmount: Number(normalizeNumber(segment.refundAmount).toFixed(2)),
-      refundRate: Number(normalizeNumber(segment.refundRate).toFixed(2)),
-      ticketRate: Number(normalizeNumber(segment.ticketRate).toFixed(2)),
-      orderCount: Number(segment.orderCount || 0)
-    }
+  const loginImpact = customerSummaries.map((customer) => ({
+    customer: customer.customerName || customer.customerId,
+    loginEventCount: Number(normalizeNumber(customer.loginEventCount).toFixed(2)),
+    purchasesTotal: Number(normalizeNumber(customer.purchasesTotal).toFixed(2))
   }));
 
   return {
-    netRevenueBySegment,
-    refundBySegment,
-    refundsOverTime,
-    customerMixBySegment,
-    heatmap
+    funnelEfficiency,
+    engagementVsConversion,
+    cartDropRate,
+    customerLoyalty,
+    loginImpact
   };
 }
 
@@ -58,16 +62,17 @@ async function analyzeDmoEntities(modeled = {}, options = {}) {
 
   const semanticView = semanticModule.buildSemanticView(modeled || {});
   const charts = buildChartsFromSemantic(semanticView);
+  const customerSummaries = Array.isArray(semanticView.customerSummaries) ? semanticView.customerSummaries : [];
   const managerInsights = await aiModule.generateManagerInsights(
     {
       ...semanticView,
       comparisonFlags: {
-        highRefundSegments: semanticView.segmentSummaries
-          .filter((segment) => segment.flags?.highRefundPressure)
-          .map((segment) => segment.segment),
-        atRiskSegments: semanticView.segmentSummaries
-          .filter((segment) => segment.flags?.atRisk)
-          .map((segment) => segment.segment)
+        highAbandonmentCustomers: customerSummaries
+          .filter((customer) => customer.flags?.highAbandonmentPressure)
+          .map((customer) => customer.customerName || customer.customerId),
+        atRiskCustomers: customerSummaries
+          .filter((customer) => customer.flags?.atRisk)
+          .map((customer) => customer.customerName || customer.customerId)
       }
     },
     options.ai || {}

@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-009
+customerName,Urban Parcel
+sessionCount,45
+uniqueVisitorsOrCustomers,1
+productViewCount,120
+addToCartCount,30
+cartAbandonmentCount,7
+abandonedCartsCount,7
+checkoutStartCount,21
+completedPurchaseCount,3
+purchasesTotal,260
+repeatCustomerCount,4
+avgSessionDurationMinutes,8
+avgLoggedInMinutes,6
+loginEventCount,28
+logoutEventCount,27
+cartToCheckoutRate,70
+checkoutToPurchaseRate,14.29

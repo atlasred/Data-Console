@@ -1,0 +1,19 @@
+metric,value
+customerId,cu-spectrum-019
+customerName,Mira Lane
+sessionCount,12
+uniqueVisitorsOrCustomers,1
+productViewCount,78
+addToCartCount,18
+cartAbandonmentCount,10
+abandonedCartsCount,10
+checkoutStartCount,4
+completedPurchaseCount,0
+purchasesTotal,0
+repeatCustomerCount,0
+avgSessionDurationMinutes,5
+avgLoggedInMinutes,3
+loginEventCount,16
+logoutEventCount,16
+cartToCheckoutRate,22.22
+checkoutToPurchaseRate,0

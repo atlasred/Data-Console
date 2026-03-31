@@ -2,9 +2,7 @@ import { createKpiCard } from '../components/kpiCard.js';
 import { createSpeedometer } from '../components/speedometer.js';
 import {
   renderBarChart,
-  renderLineChart,
-  renderDonutChart,
-  renderHeatmap
+  renderScatterChart
 } from '../charts/dmoCharts.js';
 
 function sumEntityCounts(entityCounts = {}) {
@@ -80,13 +78,19 @@ export function pipelinePlugin(root) {
   chartsPanel.innerHTML = `<div class="title">Customers Analysis</div><div class="charts-grid"></div>`;
   const chartsGrid = chartsPanel.querySelector('.charts-grid');
 
-  const netRevenueCard = chartCard('Net Revenue by Segment', 'Bar');
-  const refundCard = chartCard('Refund by Segment', 'Bar');
-  const refundsOverTimeCard = chartCard('Refunds Over Time', 'Line');
-  const customerMixCard = chartCard('Customer Mix by Segment', 'Donut');
-  const heatmapCard = chartCard('Segment × Metric', 'Heatmap');
+  const funnelEfficiencyCard = chartCard('Funnel Efficiency', 'Bar');
+  const engagementVsConversionCard = chartCard('Engagement vs Conversion', 'Scatter');
+  const cartDropRateCard = chartCard('Cart Drop Rate', 'Bar');
+  const customerLoyaltyCard = chartCard('Customer Loyalty', 'Bar');
+  const loginImpactCard = chartCard('Login Impact', 'Scatter');
 
-  chartsGrid.append(customerMixCard, netRevenueCard, refundCard, refundsOverTimeCard, heatmapCard);
+  chartsGrid.append(
+    funnelEfficiencyCard,
+    engagementVsConversionCard,
+    cartDropRateCard,
+    customerLoyaltyCard,
+    loginImpactCard
+  );
 
   const aiPanel = document.createElement('article');
   aiPanel.className = 'panel compact';
@@ -123,11 +127,7 @@ export function pipelinePlugin(root) {
   const aiActions = aiPanel.querySelector('#aiActions');
   const fileProcessingList = processPanel.querySelector('#fileProcessingList');
   const csvFiles = [
-    'customer_profiles.csv',
-    'customer_orders.csv',
-    'customer_returns.csv',
-    'customer_subscriptions.csv',
-    'customer_support_tickets.csv'
+    'customers*.csv'
   ];
 
   function renderFileProcessingItems() {
@@ -209,11 +209,39 @@ export function pipelinePlugin(root) {
   function renderAnalyticsCharts(analytics) {
     const charts = analytics?.charts || {};
 
-    renderBarChart(netRevenueCard.querySelector('.chart-body'), (charts.netRevenueBySegment || []).map((item) => ({ label: item.segment, value: item.value })), { decimals: 1 });
-    renderBarChart(refundCard.querySelector('.chart-body'), (charts.refundBySegment || []).map((item) => ({ label: item.segment, value: item.refundAmount })), { decimals: 1 });
-    renderLineChart(refundsOverTimeCard.querySelector('.chart-body'), (charts.refundsOverTime || []).map((item) => ({ label: item.month, value: item.refundAmount })));
-    renderDonutChart(customerMixCard.querySelector('.chart-body'), (charts.customerMixBySegment || []).map((item) => ({ label: item.segment, value: item.customers })));
-    renderHeatmap(heatmapCard.querySelector('.chart-body'), charts.heatmap || []);
+    renderBarChart(
+      funnelEfficiencyCard.querySelector('.chart-body'),
+      (charts.funnelEfficiency || []).map((item) => ({ label: item.customer, value: item.conversionRate })),
+      { decimals: 1, unit: '%' }
+    );
+    renderScatterChart(
+      engagementVsConversionCard.querySelector('.chart-body'),
+      (charts.engagementVsConversion || []).map((item) => ({
+        label: item.customer,
+        x: item.avgSessionDurationMinutes,
+        y: item.completedPurchaseCount
+      })),
+      { xLabel: 'Avg Session Duration (min)', yLabel: 'Completed Purchases' }
+    );
+    renderBarChart(
+      cartDropRateCard.querySelector('.chart-body'),
+      (charts.cartDropRate || []).map((item) => ({ label: item.customer, value: item.cartAbandonmentRate })),
+      { decimals: 1, unit: '%' }
+    );
+    renderBarChart(
+      customerLoyaltyCard.querySelector('.chart-body'),
+      (charts.customerLoyalty || []).map((item) => ({ label: item.customer, value: item.repeatRate })),
+      { decimals: 1, unit: '%' }
+    );
+    renderScatterChart(
+      loginImpactCard.querySelector('.chart-body'),
+      (charts.loginImpact || []).map((item) => ({
+        label: item.customer,
+        x: item.loginEventCount,
+        y: item.purchasesTotal
+      })),
+      { xLabel: 'Login Events', yLabel: 'Purchases Total' }
+    );
 
     renderAiSummary(analytics.managerInsights || {});
   }

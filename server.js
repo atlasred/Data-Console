@@ -42,11 +42,11 @@ function readDmoAnalytics() {
     return {
       generatedAt: null,
       charts: {
-        netRevenueBySegment: [],
-        refundBySegment: [],
-        refundsOverTime: [],
-        customerMixBySegment: [],
-        heatmap: []
+        funnelEfficiency: [],
+        engagementVsConversion: [],
+        cartDropRate: [],
+        customerLoyalty: [],
+        loginImpact: []
       }
     };
   }
